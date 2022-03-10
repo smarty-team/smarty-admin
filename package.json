@@ -1,0 +1,19 @@
+{
+  "name": "smarty-admin-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "node ./scripts/preinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/su37josephxia/smarty-admin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/su37josephxia/smarty-admin/issues"
+  },
+  "homepage": "https://github.com/su37josephxia/smarty-admin#readme"
+}

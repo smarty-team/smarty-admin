@@ -1,0 +1,16 @@
+{
+  "name": "smarty-admin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@smarty-admin/utils": "workspace:^1.0.0",
+    "vue": "^3.2.31"
+  }
+}
