@@ -1,0 +1,46 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add unplugin-auto-import/vite
+
+PATH: 
+  /Users/xiaran/opt/anaconda3/bin:/Users/xiaran/opt/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  16.11.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://github.com/unplugin-auto-import/vite: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141545:19)
+      at listOnTimeout (node:internal/timers:557:17)
+      at processTimers (node:internal/timers:500:7)
+
+npm manifest: 
+  {
+    "name": "vue-now",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@vitejs/plugin-vue": "^2.2.2",
+      "@vitejs/plugin-vue-jsx": "^1.3.7",
+      "vite": "^2.8.4",
+      "vue": "^3.2.31"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
