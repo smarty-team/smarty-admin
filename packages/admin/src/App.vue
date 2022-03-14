@@ -16,6 +16,9 @@ const user = useUserStore()
 </script>
 
 <template>
+
+  <MyButton />
+
   <button @click="add">{{ num }}</button>
   <div>Hello SFC ....</div>
   <router-link to="/user">To User</router-link>

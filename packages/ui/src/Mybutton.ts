@@ -1,11 +1,9 @@
-export default {
-    name: "MyButton",
-    data: function () {
-      return {
-        count: 0,
-      };
-    },
-    template:
-      '<button v-on:click="count++">You clicked me {{ count }} times.</button>',
-  };
-  
+import { defineComponent, h } from "vue";
+
+export default defineComponent({
+  name: "MyButton",
+  // template:'<button>MyButton</button>'
+  render() {
+    return h("button", null, "MyButton");
+  },
+});

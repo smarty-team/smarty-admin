@@ -1,14 +1,9 @@
 import MyButton from "./Mybutton";
+import { App } from "vue";
+export { MyButton };
 
-// 添加插件
-MyButton['install'] = (app) => app.component("MyButton", MyButton);
-
-// 组件库
-const SmartyUI = {
-  MyButton,
-  install: (app) => {
-    app.use(MyButton);
+export default {
+  install(app: App) {
+    app.component(MyButton.name, MyButton);
   },
 };
-
-export default SmartyUI;
