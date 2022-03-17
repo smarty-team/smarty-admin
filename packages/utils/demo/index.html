@@ -1,0 +1,15 @@
+<script src="../dist/bundle.umd.js"></script>
+<script src="../dist/bundle.es.js"></script>
+<script src="../node_modules/requirejs/require.js"></script>
+<script type="module">
+    console.log('iife:',utils.whoAmI)
+</script>
+<script type="module"></script>
+    import {whoAmI} from '../dist/bundle.es.js'
+    console.log('es:',whoAmI)
+</script>
+<script >
+    require(['../dist/bundle.umd.js'],utils => {
+        console.log('amd requirejs:',utils.whoAmI)
+    })
+</script>
