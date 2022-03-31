@@ -1,5 +1,6 @@
 // const vuePlugin = require("../../rollup-plugin-vue/index");
 import babel from "@rollup/plugin-babel";
+import vue from "rollup-plugin-vue";
 const resolve = require("@rollup/plugin-node-resolve");
 
 const extensions = [".js", ".ts", ".tsx"];
@@ -8,7 +9,8 @@ const umd = {
   output: {
     file: "dist/smartyui.umd.js",
     name: "SmartyUI",
-    format: "iife",
+    format: "umd",
+    exports: "named",
     globals: {
       vue: "Vue",
     },
@@ -16,15 +18,18 @@ const umd = {
   extensions,
   external: ["vue"],
   plugins: [
-    // rollupTypescript(),
+    vue({
+      css: true,
+    }),
+
     babel({
       exclude: "node_modules/**",
-      extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+      extensions,
       plugins: [
         [
           "module-resolver",
           {
-            extensions: [".ts", "tsx", "js", "jsx", ".json"],
+            extensions,
             root: ["./src"],
           },
         ],
@@ -32,7 +37,7 @@ const umd = {
     }),
     // 默认模块扩展名
     resolve.default({
-      extensions: [".js", ".ts", ".json"],
+      extensions,
       modulesOnly: true,
       preferredBuiltins: false,
     }),
