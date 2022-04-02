@@ -23,7 +23,9 @@ export default defineConfig({
       extensions: ["vue", "md"],
     }),
 
-    Layouts(),
+    Layouts({
+      layoutsDirs: 'src/layouts'
+    }),
 
     AutoImport({
       imports: ["vue", "vue-i18n"],

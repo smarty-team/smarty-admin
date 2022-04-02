@@ -11,10 +11,9 @@ import { setupLayouts } from "virtual:generated-layouts";
 import generatedRoutes from "virtual:generated-pages";
 
 import "uno.css";
-
-import NProgress from 'nprogress'; // 进度条
-import 'nprogress/nprogress.css'; //这个样式必须引入
-
+import "./css/main.css";
+import NProgress from "nprogress"; // 进度条
+import "nprogress/nprogress.css"; //这个样式必须引入
 
 // import * as i18n from "./modules/i18n";
 
@@ -39,20 +38,17 @@ import App from "./App.vue";
 // };
 const app = createApp(App);
 
+NProgress.inc(0.2); //递增进度条
+NProgress.configure({ easing: "ease", speed: 500, showSpinner: false });
 
-
-NProgress.inc(0.2);//递增进度条
-NProgress.configure({ easing: 'ease', speed: 500, showSpinner: false });
-
-router.beforeEach((to,from,next) => {
-  NProgress.start() 
-  next()
-})
+router.beforeEach((to, from, next) => {
+  NProgress.start();
+  next();
+});
 
 router.afterEach(() => {
-  NProgress.done()
-})
-
+  NProgress.done();
+});
 
 app.use(router);
 
@@ -66,7 +62,7 @@ app.use(router);
 // app.use(i18n);
 
 Object.values(import.meta.globEager("./modules/*.ts")).forEach((i) =>
-  i.install?.({app})
+  i.install?.({ app })
 );
 
 app.mount("#app");
