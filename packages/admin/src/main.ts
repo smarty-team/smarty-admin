@@ -10,8 +10,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import { setupLayouts } from "virtual:generated-layouts";
 import generatedRoutes from "virtual:generated-pages";
 
-import "uno.css";
 import "./css/main.css";
+import "uno.css";
 import NProgress from "nprogress"; // 进度条
 import "nprogress/nprogress.css"; //这个样式必须引入
 

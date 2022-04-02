@@ -5,6 +5,7 @@ import Layouts from "vite-plugin-vue-layouts";
 import Components from "unplugin-vue-components/vite";
 import Pages from "vite-plugin-pages";
 import Unocss from "unocss/vite";
+import presetIcons from "@unocss/preset-icons";
 import path from "path";
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 
@@ -24,7 +25,7 @@ export default defineConfig({
     }),
 
     Layouts({
-      layoutsDirs: 'src/layouts'
+      layoutsDirs: "src/layouts",
     }),
 
     AutoImport({
@@ -40,13 +41,14 @@ export default defineConfig({
       dts: "src/components.d.ts",
     }),
 
-    Unocss(),
+    Unocss({
+      presets: [presetIcons()],
+    }),
 
     VueI18n({
       runtimeOnly: true,
       compositionOnly: true,
       include: [path.resolve(__dirname, "locales/**")],
     }),
-
   ],
 });
