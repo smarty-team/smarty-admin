@@ -2,5 +2,6 @@
   "compilerOptions": {
     "jsx": "preserve"
   },
-  "include": ["src/**/*.*"]
+  "include": ["src/**/*.*"],
+  "esModuleInterop":true
 }

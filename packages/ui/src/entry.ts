@@ -1,4 +1,4 @@
-import MyButton from "./Mybutton";
+import MyButton from "./MyButton";
 import SFCButton from "./SFCButton.vue"
 import JSXButton from './JSXButton'
 import { App } from "vue";

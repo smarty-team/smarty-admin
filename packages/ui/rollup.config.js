@@ -1,7 +1,7 @@
 // const vuePlugin = require("../../rollup-plugin-vue/index");
 import babel from "@rollup/plugin-babel";
 import vue from "rollup-plugin-vue";
-const resolve = require("@rollup/plugin-node-resolve");
+import resolve from "@rollup/plugin-node-resolve";
 
 const extensions = [".js", ".ts", ".tsx"];
 const umd = {
@@ -36,7 +36,7 @@ const umd = {
       ],
     }),
     // 默认模块扩展名
-    resolve.default({
+    resolve({
       extensions,
       modulesOnly: true,
       preferredBuiltins: false,
