@@ -1,0 +1,63 @@
+table {
+  @apply w-full;
+}
+
+thead {
+  @apply hidden lg:table-header-group;
+}
+
+tr {
+  @apply max-w-full block relative border-b-4
+    lg:table-row lg:border-b-0 dark:border-gray-700;
+}
+
+tr:last-child {
+  @apply border-b-0;
+}
+
+th {
+  @apply lg:text-left lg:py-2 lg:px-3;
+}
+
+td {
+  @apply flex justify-between text-right py-3 px-4 align-top border-b
+    lg:table-cell lg:text-left lg:py-2 lg:px-3 lg:align-middle lg:border-b-0 dark:border-gray-700;
+}
+
+td:last-child {
+  @apply border-b-0;
+}
+
+tbody tr, tbody tr:nth-child(odd) {
+  @apply lg:dark:hover:bg-gray-700 lg:dark:hover:bg-opacity-70;
+}
+
+tbody tr:nth-child(odd) {
+  @apply lg:dark:bg-gray-800;
+}
+
+td:before {
+  content: attr(data-label);
+  @apply font-semibold pr-3 text-left lg:hidden;
+}
+
+td.checkbox-cell, th.checkbox-cell {
+  @apply lg:w-5;
+}
+
+td.progress-cell progress {
+  @apply flex w-2/5 self-center
+    lg:w-full;
+}
+
+td.image-cell {
+  @apply border-b-0 lg:w-6;
+}
+
+td.image-cell:before, td.actions-cell:before {
+  @apply hidden;
+}
+
+td.image-cell .image {
+  @apply w-24 h-24 mx-auto lg:w-6 lg:h-6;
+}

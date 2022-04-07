@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="pt-14 xl:pl-60">
+    <div>
       <router-view />
     </div>
   </main>

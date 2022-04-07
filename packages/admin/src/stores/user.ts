@@ -7,9 +7,28 @@ export const useUserStore = defineStore("user", () => {
     count.value = count.value + num;
   }
 
+  // darkMode
+  const darkMode = ref(false);
+  function toggleDarkMode() {
+    darkMode.value != darkMode.value;
+  }
+
+  const lightBorderStyle = ref("");
+  const basicConfig = reactive({
+    isFieldFocusRegistered: false,
+  });
+
+  const basic = (val: { key: keyof typeof basicConfig; value: any }) => {
+    basicConfig[val.key] = val.value
+  };
   return {
     add,
     count,
+    darkMode,
+    toggleDarkMode,
+    lightBorderStyle,
+    ...toRefs(basicConfig),
+    basic
   };
 });
 
