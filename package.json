@@ -7,12 +7,10 @@
     "preinstall": "node ./scripts/preinstall.js",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "commit-msg": "node script/verify-commit.js",
-      "pre-push": "npm test"
-    }
+  "gitHooks": {
+    "pre-commit": "npm run lint",
+    "commit-msg": "node script/verify-commit.js",
+    "pre-push": "npm test"
   },
   "repository": {
     "type": "git",
