@@ -7,11 +7,13 @@
     "preinstall": "node ./scripts/preinstall.js",
     "prepare": "husky install"
   },
-  "gitHooks": {
-    "pre-commit": "npm run lint",
-    "commit-msg": "node script/verify-commit.js",
-    "pre-push": "npm test"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged", 
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS" 
+    }
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/su37josephxia/smarty-admin.git"
