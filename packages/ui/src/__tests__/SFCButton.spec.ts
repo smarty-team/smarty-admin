@@ -10,7 +10,7 @@ describe("Test SFCButton", () => {
     const wrapper = mount(Comp, {
       global: {
         components: {
-            SFCButton,
+          SFCButton,
         },
       },
     });

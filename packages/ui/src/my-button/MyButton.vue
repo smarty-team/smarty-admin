@@ -1,8 +1,8 @@
 <template>
-  <button>Button</button>
+  <button>MyButton</button>
 </template>
 <script lang="ts">
 export default {
-  name: "Button",
+  name: "MyButton",
 };
 </script>
