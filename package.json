@@ -7,12 +7,7 @@
     "preinstall": "node ./scripts/preinstall.js",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged", 
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS" 
-    }
-  },
+
 
   "repository": {
     "type": "git",
