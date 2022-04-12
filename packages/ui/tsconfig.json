@@ -2,6 +2,6 @@
   "compilerOptions": {
     "jsx": "preserve"
   },
-  "include": ["src/**/*.*"],
+  "include": ["src/**/*.*", "shims-vue.d.ts", "shims-vue.d.ts"],
   "esModuleInterop":true
 }
