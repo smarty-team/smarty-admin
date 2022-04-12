@@ -12,6 +12,7 @@
     "commit-msg": "node ./scripts/verify-commit.js",
     "pre-push": "npm test"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/su37josephxia/smarty-admin.git"
