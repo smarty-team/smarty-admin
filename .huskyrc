@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "pre-commit": "node ./scripts/test.js",
+    "commit-msg": "node ./scripts/verify-commit.js",
+    "pre-push": "npm test"
+  }
+}
