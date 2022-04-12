@@ -1,2 +1,2 @@
-console.log('Husky Test')
+console.error('Husky Test')
 process.exit(1)
