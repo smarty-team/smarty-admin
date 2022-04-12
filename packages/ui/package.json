@@ -11,13 +11,6 @@
     "compile": "babel src --out-dir lib --extensions \".ts\"",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "commit-msg": "node script/verify-commit.js",
-      "pre-push": "npm test"
-    }
-  },
   "author": "",
   "type": "module",
   "license": "ISC",
