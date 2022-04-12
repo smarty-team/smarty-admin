@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node ./scripts/preinstall.js"
+    "preinstall": "node ./scripts/preinstall.js",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "node scripts/verify-commit.js",
+      "pre-push": "npm test"
+    }
   },
   "repository": {
     "type": "git",
