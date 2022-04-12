@@ -3,7 +3,10 @@ lockfileVersion: 5.3
 importers:
 
   .:
-    specifiers: {}
+    specifiers:
+      husky: ^7.0.4
+    dependencies:
+      husky: registry.npmmirror.com/husky/7.0.4
 
   packages/admin:
     specifiers:
