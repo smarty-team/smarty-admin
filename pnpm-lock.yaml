@@ -74,6 +74,7 @@ importers:
       eslint-plugin-json: ^3.1.0
       eslint-plugin-prettier: ^4.0.0
       eslint-plugin-vue: ^8.6.0
+      husky: ^7.0.4
       jest: ^27.5.1
       prettier: ^2.6.2
       rollup: ^2.70.1
@@ -112,6 +113,7 @@ importers:
       eslint-plugin-json: registry.npmmirror.com/eslint-plugin-json/3.1.0
       eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.0.0_eslint@8.13.0+prettier@2.6.2
       eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/8.6.0_eslint@8.13.0
+      husky: registry.npmmirror.com/husky/7.0.4
       jest: registry.npmmirror.com/jest/27.5.1
       prettier: registry.npmmirror.com/prettier/2.6.2
       rollup: registry.npmmirror.com/rollup/2.70.1
@@ -5753,6 +5755,14 @@ packages:
     name: human-signals
     version: 2.1.0
     engines: {node: '>=10.17.0'}
+    dev: false
+
+  registry.npmmirror.com/husky/7.0.4:
+    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husky/-/husky-7.0.4.tgz}
+    name: husky
+    version: 7.0.4
+    engines: {node: '>=12'}
+    hasBin: true
     dev: false
 
   registry.npmmirror.com/iconv-lite/0.4.24:

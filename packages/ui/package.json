@@ -10,6 +10,13 @@
     "eslint": "eslint --fix --ext .ts,.vue src",
     "compile": "babel src --out-dir lib --extensions \".ts\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "node script/verify-commit.js",
+      "pre-push": "npm test"
+    }
+  },
   "author": "",
   "type": "module",
   "license": "ISC",
@@ -43,6 +50,7 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.6.0",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
     "rollup": "^2.70.1",
