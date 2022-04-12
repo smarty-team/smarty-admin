@@ -5,13 +5,9 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "node ./scripts/preinstall.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": "npm abc && eslint"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged",
-    "commit-msg": "node scripts/verify-commit-msg.js"
-  },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/su37josephxia/smarty-admin.git"
@@ -24,5 +20,8 @@
   "homepage": "https://github.com/su37josephxia/smarty-admin#readme",
   "dependencies": {
     "husky": "^7.0.4"
+  },
+  "devDependencies": {
+    "husky": "^7.0.0"
   }
 }
