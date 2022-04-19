@@ -17,11 +17,10 @@
     "url": "https://github.com/su37josephxia/smarty-admin/issues"
   },
   "homepage": "https://github.com/su37josephxia/smarty-admin#readme",
-  "dependencies": {
-    "husky": "4.2.5"
-  },
   "hooks": {
     "pre-commit": "npm lint"
+  },
+  "devDependencies": {
+    "husky": "4.2.5"
   }
-
 }
