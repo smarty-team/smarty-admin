@@ -4,9 +4,9 @@ importers:
 
   .:
     specifiers:
-      husky: ^7.0.4
+      husky: 4.2.5
     dependencies:
-      husky: registry.npmmirror.com/husky/7.0.4
+      husky: registry.npmmirror.com/husky/4.2.5
 
   packages/admin:
     specifiers:
@@ -2656,7 +2656,6 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/parse-json/-/parse-json-4.0.0.tgz}
     name: '@types/parse-json'
     version: 4.0.0
-    dev: true
 
   registry.npmmirror.com/@types/prettier/2.4.4:
     resolution: {integrity: sha512-ReVR2rLTV1kvtlWFyuot+d1pkpG2Fw/XKE3PDAdj57rbM97ttSp9JZ2UsP+2EHTylra9cUf6JA7tGwW1INzUrA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/prettier/-/prettier-2.4.4.tgz}
@@ -4964,6 +4963,12 @@ packages:
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
 
+  registry.npmmirror.com/ci-info/2.0.0:
+    resolution: {integrity: sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ci-info/-/ci-info-2.0.0.tgz}
+    name: ci-info
+    version: 2.0.0
+    dev: false
+
   registry.npmmirror.com/ci-info/3.3.0:
     resolution: {integrity: sha512-riT/3vI5YpVH6/qomlDnJow6TBee2PBKSEpx3O32EGPYbWGIRsIlGRms3Sm74wYE1JMo8RnO04Hb12+v1J5ICw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ci-info/-/ci-info-3.3.0.tgz}
     name: ci-info
@@ -5081,6 +5086,12 @@ packages:
     version: 1.0.1
     dev: false
 
+  registry.npmmirror.com/compare-versions/3.6.0:
+    resolution: {integrity: sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/compare-versions/-/compare-versions-3.6.0.tgz}
+    name: compare-versions
+    version: 3.6.0
+    dev: false
+
   registry.npmmirror.com/component-emitter/1.3.0:
     resolution: {integrity: sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/component-emitter/-/component-emitter-1.3.0.tgz}
     name: component-emitter
@@ -5143,6 +5154,19 @@ packages:
     version: 1.0.3
     dev: true
     optional: true
+
+  registry.npmmirror.com/cosmiconfig/6.0.0:
+    resolution: {integrity: sha512-xb3ZL6+L8b9JLLCx3ZdoZy4+2ECphCMo2PwqgP1tlfVq6M6YReyzBJtvWWtbDSpNr9hn96pkCiZqUcFEc+54Qg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cosmiconfig/-/cosmiconfig-6.0.0.tgz}
+    name: cosmiconfig
+    version: 6.0.0
+    engines: {node: '>=8'}
+    dependencies:
+      '@types/parse-json': registry.npmmirror.com/@types/parse-json/4.0.0
+      import-fresh: registry.npmmirror.com/import-fresh/3.3.0
+      parse-json: registry.npmmirror.com/parse-json/5.2.0
+      path-type: registry.npmmirror.com/path-type/4.0.0
+      yaml: registry.npmmirror.com/yaml/1.10.2
+    dev: false
 
   registry.npmmirror.com/cosmiconfig/7.0.1:
     resolution: {integrity: sha512-a1YWNUV2HwGimB7dU2s1wUMurNKjpx60HxBB6xUM8Re+2s1g1IIfJvFR0/iCF+XHdE0GMTKTuLR32UQff4TEyQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cosmiconfig/-/cosmiconfig-7.0.1.tgz}
@@ -6431,6 +6455,15 @@ packages:
       locate-path: registry.npmmirror.com/locate-path/6.0.0
       path-exists: registry.npmmirror.com/path-exists/4.0.0
 
+  registry.npmmirror.com/find-versions/3.2.0:
+    resolution: {integrity: sha512-P8WRou2S+oe222TOCHitLy8zj+SIsVJh52VP4lvXkaFVnOFFdoWv1H1Jjvel1aI6NCFOAaeAVm8qrI0odiLcww==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/find-versions/-/find-versions-3.2.0.tgz}
+    name: find-versions
+    version: 3.2.0
+    engines: {node: '>=6'}
+    dependencies:
+      semver-regex: registry.npmmirror.com/semver-regex/2.0.0
+    dev: false
+
   registry.npmmirror.com/flat-cache/3.0.4:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/flat-cache/-/flat-cache-3.0.4.tgz}
     name: flat-cache
@@ -6888,6 +6921,25 @@ packages:
     name: human-signals
     version: 2.1.0
     engines: {node: '>=10.17.0'}
+
+  registry.npmmirror.com/husky/4.2.5:
+    resolution: {integrity: sha512-SYZ95AjKcX7goYVZtVZF2i6XiZcHknw50iXvY7b0MiGoj5RwdgRQNEHdb+gPDPCXKlzwrybjFjkL6FOj8uRhZQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husky/-/husky-4.2.5.tgz}
+    name: husky
+    version: 4.2.5
+    engines: {node: '>=10'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      chalk: registry.npmmirror.com/chalk/4.1.2
+      ci-info: registry.npmmirror.com/ci-info/2.0.0
+      compare-versions: registry.npmmirror.com/compare-versions/3.6.0
+      cosmiconfig: registry.npmmirror.com/cosmiconfig/6.0.0
+      find-versions: registry.npmmirror.com/find-versions/3.2.0
+      opencollective-postinstall: registry.npmmirror.com/opencollective-postinstall/2.0.3
+      pkg-dir: registry.npmmirror.com/pkg-dir/4.2.0
+      please-upgrade-node: registry.npmmirror.com/please-upgrade-node/3.2.0
+      slash: registry.npmmirror.com/slash/3.0.0
+      which-pm-runs: registry.npmmirror.com/which-pm-runs/1.1.0
 
   registry.npmmirror.com/husky/7.0.4:
     resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husky/-/husky-7.0.4.tgz}
@@ -8812,6 +8864,13 @@ packages:
     dependencies:
       mimic-fn: registry.npmmirror.com/mimic-fn/2.1.0
 
+  registry.npmmirror.com/opencollective-postinstall/2.0.3:
+    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz}
+    name: opencollective-postinstall
+    version: 2.0.3
+    hasBin: true
+    dev: false
+
   registry.npmmirror.com/optionator/0.8.3:
     resolution: {integrity: sha512-+IW9pACdk3XWmmTXG8m3upGUJst5XRGzxMRjXzAuJ1XnIFNvfhjjIuYkDvysnPQ7qzqVzLt78BCruntqRhWQbA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/optionator/-/optionator-0.8.3.tgz}
     name: optionator
@@ -9101,6 +9160,14 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: registry.npmmirror.com/find-up/3.0.0
+    dev: false
+
+  registry.npmmirror.com/please-upgrade-node/3.2.0:
+    resolution: {integrity: sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/please-upgrade-node/-/please-upgrade-node-3.2.0.tgz}
+    name: please-upgrade-node
+    version: 3.2.0
+    dependencies:
+      semver-compare: registry.npmmirror.com/semver-compare/1.0.0
     dev: false
 
   registry.npmmirror.com/plur/4.0.0:
@@ -9762,6 +9829,19 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       xmlchars: registry.npmmirror.com/xmlchars/2.2.0
+    dev: false
+
+  registry.npmmirror.com/semver-compare/1.0.0:
+    resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/semver-compare/-/semver-compare-1.0.0.tgz}
+    name: semver-compare
+    version: 1.0.0
+    dev: false
+
+  registry.npmmirror.com/semver-regex/2.0.0:
+    resolution: {integrity: sha512-mUdIBBvdn0PLOeP3TEkMH7HHeUP3GjsXCwKarjv/kGmUFOYg1VqEemKhoQpWMu6X2I8kHeuVdGibLGkVK+/5Qw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/semver-regex/-/semver-regex-2.0.0.tgz}
+    name: semver-regex
+    version: 2.0.0
+    engines: {node: '>=6'}
     dev: false
 
   registry.npmmirror.com/semver/5.7.1:
@@ -11168,6 +11248,13 @@ packages:
       is-set: registry.npmmirror.com/is-set/2.0.2
       is-weakmap: registry.npmmirror.com/is-weakmap/2.0.1
       is-weakset: registry.npmmirror.com/is-weakset/2.0.2
+    dev: false
+
+  registry.npmmirror.com/which-pm-runs/1.1.0:
+    resolution: {integrity: sha512-SIqZVnlKPt/s5tOArosKIvGC1bwpoj6w5Q3SmimaVOOU8YFsjuMvvZO1MbKCbO8D6VV0XkROC8jrXJNYa1xBDA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/which-pm-runs/-/which-pm-runs-1.0.0.tgz}
+    name: which-pm-runs
+    version: 1.1.0
+    deprecated: '[WARNING] Use 1.0.0 instead of 1.1.0, reason: https://github.com/zkochan/packages/commit/e7af82f03f1afe6086312d80a0fa47eb8d1c6bff'
     dev: false
 
   registry.npmmirror.com/which-typed-array/1.1.7:

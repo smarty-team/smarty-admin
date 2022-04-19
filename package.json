@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/su37josephxia/smarty-admin#readme",
   "dependencies": {
-    "husky": "^7.0.4"
+    "husky": "4.2.5"
   },
-  "devDependencies": {
-    "husky": "^7.0.0"
+  "hooks": {
+    "pre-commit": "npm lint"
   }
+
 }
