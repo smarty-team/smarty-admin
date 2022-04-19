@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "node ./scripts/preinstall.js",
-    "prepare": "husky install",
-    "pre-commit": "npm abc && eslint"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
