@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-node script/verify-commit.js
+node scripts/verify-commit.js
