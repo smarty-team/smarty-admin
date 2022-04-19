@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-node ./scripts/verify-commit.js -E HUSKY_GIT_PARAMS
+node ./scripts/verify-commit.js -E HUSKY_GIT_PARAMSnode ./scripts/verify-commit.js -E HUSKY_GIT_PARAMS
