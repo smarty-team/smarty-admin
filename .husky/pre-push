@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo ====单元测试====
+cd packages/ui
+pnpm run test
