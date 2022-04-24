@@ -4,5 +4,5 @@
   },
   "include": ["src/**/*.*", "shims-vue.d.ts", "shims-vue.d.ts"],
   // "esModuleInterop": true
-  "allowSyntheticDefaultImports": "true"
+  // "allowSyntheticDefaultImports": "true"
 }
