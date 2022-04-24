@@ -3,5 +3,5 @@
     "jsx": "preserve"
   },
   "include": ["src/**/*.*", "shims-vue.d.ts", "shims-vue.d.ts"],
-  "esModuleInterop":true
+  "esModuleInterop": true
 }
