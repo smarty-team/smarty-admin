@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/su37josephxia/smarty-admin/issues"
   },
+  
   "homepage": "https://github.com/su37josephxia/smarty-admin#readme",
   "devDependencies": {
     "husky": "^7.0.4"
