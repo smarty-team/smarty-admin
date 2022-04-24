@@ -1,4 +1,4 @@
-import MyButton from "../MyButton";
+import MyButton from "../MyButtonOrigin";
 import { mount } from "@vue/test-utils";
 
 describe("Test MyButton", () => {
