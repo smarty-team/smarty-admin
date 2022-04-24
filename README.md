@@ -1,6 +1,7 @@
 # smarty-admin
 
 ---
+[![CI](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml)
 
 # 特性
 
