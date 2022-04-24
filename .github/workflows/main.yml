@@ -20,11 +20,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js v16
-      uses: actions/setup-node@v2
+    - uses: KSXGitHub/github-actions-setup-pnpm@master
       with:
-        node-version: '16'
-        cache: 'pnpm'
+        version: 6.31.0
     - name: Install modules
       run: pnpm install
     - name: Run Lint
@@ -35,11 +33,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js v16
-      uses: actions/setup-node@v2
+    - uses: KSXGitHub/github-actions-setup-pnpm@master
       with:
-        node-version: '16'
-        cache: 'pnpm'
+        version: 6.31.0
     - name: Install modules
       run: pnpm install
     - name: Run Lint
@@ -50,11 +46,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js v16
-      uses: actions/setup-node@v2
+    - uses: KSXGitHub/github-actions-setup-pnpm@master
       with:
-        node-version: '16'
-        cache: 'pnpm'
+        version: 6.31.0
     - name: Install modules
       run: pnpm install
     - name: Run Lint
