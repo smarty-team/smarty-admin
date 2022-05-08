@@ -4,6 +4,7 @@ on:
   push:
     branches: [ publish ]
 
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -14,11 +15,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-
-      - name: Install and Build 
-        run: |
-          npm install
-          npm run build # 这是我的项目的打包命令，你也可以改成你的
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+        version: 6.31.0
+      - name: Install modules
+        run: pnpm install
+      - name: Build 
+        run: 
+          npm run build 
 
       - name: 'Publish to the npm registry'
         uses: primer/publish@3.0.0
