@@ -54,6 +54,10 @@
     "vue": "^3.2.31",
     "vue-jest": "5.0.0-alpha.10"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@babel/cli": "^7.17.6"
   }
