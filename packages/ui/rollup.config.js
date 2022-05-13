@@ -5,48 +5,49 @@ import resolve from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 const extensions = [".js", ".ts", ".tsx"];
 
-const umd = {
-  input: "src/entry.ts",
-  output: {
-    file: "dist/smartyui.umd.js",
-    name: "SmartyUI",
-    format: "umd",
-    exports: "named",
-    globals: {
-      vue: "Vue",
-    },
-  },
-  extensions,
-  external: ["vue"],
-  plugins: [
-    vue({
-      css: true,
-    }),
+// const umd = {
+//   input: "src/entry.ts",
+//   output: {
+//     file: "dist/smartyui.umd.js",
+//     name: "SmartyUI",
+//     format: "umd",
+//     exports: "named",
+//     globals: {
+//       vue: "Vue",
+//     },
+//   },
+//   extensions,
+//   external: ["vue"],
+//   plugins: [
+//     vue({
+//       css: true,
+//     }),
 
-    babel({
-      exclude: "node_modules/**",
-      extensions,
-      plugins: [
-        [
-          "module-resolver",
-          {
-            extensions,
-            root: ["./src"],
-          },
-        ],
-      ],
-    }),
-    // 默认模块扩展名
-    resolve({
-      extensions,
-      modulesOnly: true,
-      preferredBuiltins: false,
-    }),
-    // vuePlugin({
-    //   css: true,
-    // }),
-  ],
-};
+//     babel({
+//       exclude: "node_modules/**",
+//       extensions,
+//       plugins: [
+//         [
+//           "module-resolver",
+//           {
+//             extensions,
+//             root: ["./src"],
+//           },
+//         ],
+//       ],
+//     }),
+//     // 默认模块扩展名
+//     resolve({
+//       extensions,
+//       modulesOnly: true,
+//       preferredBuiltins: false,
+//     }),
+//     // vuePlugin({
+//     //   css: true,
+//     // }),
+//   ],
+// };
+// export default [umd];
 
 const name = "smartyui";
 const outputConfigs = {
@@ -114,15 +115,6 @@ function createConfig(format, output) {
       // vuePlugin({
       //   css: true,
       // }),
-      // terser({
-      //   module: /^esm/.test(format),
-
-      //   compress: {
-      //     ecma: 2015,
-      //     pure_getters: true,
-      //   },
-      //   safari10: true,
-      // }),
     ],
   };
 }
@@ -146,12 +138,12 @@ function createMinifiedConfig(format) {
   return config;
 }
 
-const packageConfigs = ["es", "cjs", "iife", "umd"]
+
+const packageConfigs = Object.keys(outputConfigs)
   .map((format) => createConfig(format, outputConfigs[format]))
   .concat(
-    ["es", "cjs", "iife", "umd"].map((format) => createMinifiedConfig(format))
+    Object.keys(outputConfigs).map((format) => createMinifiedConfig(format))
   );
-console.log("packageConfigs", packageConfigs);
 export default packageConfigs;
 
-// export default [umd];
+
