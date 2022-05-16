@@ -4,14 +4,14 @@
 <img src="https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg" style="width:100px;" />
 </p>
 
-## <h1 align="center">Smarty-Admin-UI</h1>
+<h1 align="center">Smarty-Admin-UI</h1>
 
 <p align="center">
 五脏俱全的组件库教学模型
 </p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/unocss"><img src="https://img.shields.io/npm/v/unocss?color=c95f8b&amp;label=" alt="NPM version"></a></p>
+<a href="https://www.npmjs.com/package/smarty-admin-ui"><img src="https://img.shields.io/npm/v/smarty-admin-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 
 
 [![CI](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml)
