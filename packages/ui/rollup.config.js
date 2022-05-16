@@ -1,10 +1,10 @@
 // const vuePlugin = require("../../rollup-plugin-vue/index");
 import babel from "@rollup/plugin-babel";
 import vue from "rollup-plugin-vue";
-import resolve from "@rollup/plugin-node-resolve";
+import nodeResolve from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 import * as fs from "fs-extra";
-import * as path from 'path'
+import { resolve } from "path";
 
 const extensions = [".js", ".ts", ".tsx"];
 // const umd = {
@@ -109,7 +109,7 @@ function createConfig(format, output) {
         ],
       }),
       // 默认模块扩展名
-      resolve({
+      nodeResolve({
         extensions,
         modulesOnly: true,
         preferredBuiltins: false,
@@ -151,10 +151,21 @@ function createPackageJson() {
   data.module = "dist/smartui.es.js";
 
   // 导出
-  fs.outputFileSync(path.resolve("./dist", "package.json"), JSON.stringify(data,"\t","\t"), "utf-8");
+  fs.outputFileSync(
+    resolve("./dist", "package.json"),
+    JSON.stringify(data, "\t", "\t"),
+    "utf-8"
+  );
 }
 
 createPackageJson();
+copyReadme();
+function copyReadme() {
+  fs.copyFileSync(
+    resolve("./", "README.md"),
+    resolve("./dist/", "README.md")
+  );
+}
 
 const packageConfigs = Object.keys(outputConfigs)
   .map((format) => createConfig(format, outputConfigs[format]))
