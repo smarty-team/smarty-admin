@@ -3,8 +3,10 @@ import babel from "@rollup/plugin-babel";
 import vue from "rollup-plugin-vue";
 import resolve from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
-const extensions = [".js", ".ts", ".tsx"];
+import * as fs from "fs-extra";
+import * as path from 'path'
 
+const extensions = [".js", ".ts", ".tsx"];
 // const umd = {
 //   input: "src/entry.ts",
 //   output: {
@@ -138,12 +140,26 @@ function createMinifiedConfig(format) {
   return config;
 }
 
+/**
+ * 创建Package.json
+ * @description 复制package.json 修改导出模块属性
+ */
+function createPackageJson() {
+  const data = require("./package.json");
+  console.log("json", data);
+  data.main = "dist/smartyui.cjs.js";
+  data.module = "dist/smartui.es.js";
+
+  // 导出
+  fs.outputFileSync(path.resolve("./dist", "package.json"), JSON.stringify(data,"\t","\t"), "utf-8");
+}
+
+createPackageJson();
 
 const packageConfigs = Object.keys(outputConfigs)
   .map((format) => createConfig(format, outputConfigs[format]))
   .concat(
     Object.keys(outputConfigs).map((format) => createMinifiedConfig(format))
   );
+
 export default packageConfigs;
-
-

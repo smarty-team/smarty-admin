@@ -99,6 +99,7 @@ importers:
       eslint-plugin-json: ^3.1.0
       eslint-plugin-prettier: ^4.0.0
       eslint-plugin-vue: ^8.6.0
+      fs-extra: ^10.1.0
       husky: ^7.0.4
       jest: ^27.5.1
       prettier: ^2.6.2
@@ -139,6 +140,7 @@ importers:
       eslint-plugin-json: registry.npmmirror.com/eslint-plugin-json/3.1.0
       eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.0.0_eslint@8.13.0+prettier@2.6.2
       eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/8.6.0_eslint@8.13.0
+      fs-extra: registry.npmmirror.com/fs-extra/10.1.0
       husky: registry.npmmirror.com/husky/7.0.4
       jest: registry.npmmirror.com/jest/27.5.1
       prettier: registry.npmmirror.com/prettier/2.6.2
