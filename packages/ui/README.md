@@ -31,7 +31,7 @@
 ## Install
 
 ```bash
-npm i 
+npm i smarty-admin-ui
 ```
 
 ## Quick Start
