@@ -50,40 +50,13 @@ const extensions = [".js", ".ts", ".tsx"];
 //   ],
 // };
 // export default [umd];
-
-const name = "smartyui";
-const outputConfigs = {
-  cjs: {
-    file: `dist/${name}.cjs.js`,
-    format: `cjs`,
-  },
-  es: {
-    file: `dist/${name}.es.js`,
-    format: `es`,
-  },
-  iife: {
-    file: `dist/${name}.iife.js`,
-    format: `iife`,
-  },
-  umd: {
-    file: `dist/${name}.umd.js`,
-    format: `umd`,
-  },
-};
-
-function createConfig(format, output) {
-  output = Object.assign(
-    {
-      file: "dist/smartyui.umd.js",
-      name: "SmartyUI",
-      format: "umd",
-      exports: "named",
-      globals: {
-        vue: "Vue",
-      },
-    },
-    output
-  );
+/**
+ * 配置工厂
+ * @param {*} format
+ * @param {*} output
+ */
+function createConfig(output) {
+  output = Object.assign(output);
 
   return {
     input: "src/entry.ts",
@@ -120,16 +93,16 @@ function createConfig(format, output) {
     ],
   };
 }
-
-function createMinifiedConfig(format) {
-  const config = createConfig(format, {
-    file: outputConfigs[format].file.replace(/\.js$/, ".min.js"),
-    format: outputConfigs[format].format,
-  });
-
+/**
+ * 压缩配置工厂
+ * @param {*} output
+ */
+function createMinifiedConfig(output) {
+  output.file = output.file.replace(/\.js$/, ".min.js");
+  const config = createConfig(output);
   config.plugins.push(
     terser({
-      module: /^esm/.test(format),
+      module: /^esm/.test(output.format),
       compress: {
         ecma: 2015,
         pure_getters: true,
@@ -140,17 +113,24 @@ function createMinifiedConfig(format) {
   return config;
 }
 
-/**
- * 创建Package.json
- * @description 复制package.json 修改导出模块属性
- */
-function createPackageJson() {
-  const data = require("./package.json");
-  console.log("json", data);
-  data.main = "dist/smartyui.cjs.js";
-  data.module = "dist/smartui.es.js";
+const outputs = ["esm", "cjs", "iife", "umd"].map((format) => ({
+  file: `dist/smartyui.${format}.js`,
+  name: "SmartyUI",
+  format,
+  exports: "named",
+  globals: {
+    vue: "Vue",
+  },
+}));
 
-  // 导出
+const packageConfigs = outputs
+  .map((output) => createConfig(output))
+  .concat(outputs.map((output) => createMinifiedConfig(output)));
+
+function createPackageJSON() {
+  const data = require("./package.json");
+  (data.main = "dist/smartyui.cjs.js"), (data.module = "dist/smartui.esm.js");
+
   fs.outputFileSync(
     resolve("./dist", "package.json"),
     JSON.stringify(data, "\t", "\t"),
@@ -158,19 +138,12 @@ function createPackageJson() {
   );
 }
 
-createPackageJson();
-copyReadme();
-function copyReadme() {
-  fs.copyFileSync(
-    resolve("./", "README.md"),
-    resolve("./dist/", "README.md")
-  );
+
+function copyREADME() {
+  fs.copyFileSync(resolve('./README.md'),resolve('./dist/README.md'))
 }
 
-const packageConfigs = Object.keys(outputConfigs)
-  .map((format) => createConfig(format, outputConfigs[format]))
-  .concat(
-    Object.keys(outputConfigs).map((format) => createMinifiedConfig(format))
-  );
 
+createPackageJSON();
+copyREADME()
 export default packageConfigs;
