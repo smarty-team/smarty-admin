@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    "declaration": true, /* 生成相关的 '.d.ts' 文件。 */ 
+    "declarationDir": "./dist/types", /* '.d.ts' 文件输出目录 */ 
     "jsx": "preserve"
   },
   "include": ["src/**/*.*", "shims-vue.d.ts", "shims-vue.d.ts"],
   // "esModuleInterop": true
-  "allowSyntheticDefaultImports": "true"
+  // "allowSyntheticDefaultImports": "true"
 }

@@ -1,12 +1,12 @@
-import MyButton from "./MyButton";
+import MyButtonOrigin from "./MyButtonOrigin";
 import SFCButton from "./SFCButton.vue";
 import JSXButton from "./JSXButton";
 import { App } from "vue";
-export { MyButton };
+export { MyButtonOrigin };
 
 export default {
   install(app: App) {
-    app.component(MyButton.name, MyButton);
+    app.component(MyButtonOrigin.name, MyButtonOrigin);
     app.component(JSXButton.name, JSXButton);
     app.component(SFCButton.name, SFCButton);
   },
