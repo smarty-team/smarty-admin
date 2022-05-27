@@ -1,0 +1,16 @@
+<div id="app"></div>
+<script src="../dist/smarty-ui.umd.js"></script>
+<script src="../node_modules/vue/dist/vue.global.js"></script>
+<script>
+  const { createApp, reactive, computed, watchEffect } = Vue;
+
+  const MyComponent = {
+    template: `
+          <MyButton/>
+          <JSXButton/>
+          <SFCButton/>
+      `,
+  };
+
+  createApp(MyComponent).use(SmartyUI.default).mount("#app");
+</script>
