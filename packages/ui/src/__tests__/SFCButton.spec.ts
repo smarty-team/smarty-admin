@@ -8,7 +8,6 @@
 //       template: `<div><SFCButton></SFCButton></div>`,
 //     };
 
-    
 //     const wrapper = mount(Comp, {
 //       global: {
 //         components: {

@@ -3,4 +3,4 @@
 
 echo ====单元测试====
 cd packages/ui
-# pnpm run test
+pnpm run test
