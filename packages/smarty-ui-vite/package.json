@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +18,12 @@
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "vite": "^2.9.9",
     "vue": "^3.2.36"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.9",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "vitepress": "^0.22.4",
+    "vitepress-theme-demoblock": "^1.4.2"
   }
 }
