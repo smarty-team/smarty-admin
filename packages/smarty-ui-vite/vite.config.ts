@@ -20,7 +20,6 @@ export default defineConfig({
   ],
   build: {
     rollupOptions,
-    // sourcemap:'inline',
     minify:false,
     lib: {
       entry: "./src/entry.ts",
