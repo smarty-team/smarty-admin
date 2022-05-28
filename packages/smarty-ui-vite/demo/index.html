@@ -1,16 +1,18 @@
+<h1>Demo</h1>
 <div id="app"></div>
-<script src="../dist/smarty-ui.umd.js"></script>
-<script src="../node_modules/vue/dist/vue.global.js"></script>
-<script>
-  const { createApp, reactive, computed, watchEffect } = Vue;
+<script type="module">
+  import { createApp } from "vue/dist/vue.esm-bundler.js";
+  import SmartyUI, {SFCButton,JSXButton,MyButton} from "../dist/smarty-ui.es.js";
 
-  const MyComponent = {
+  createApp({
     template: `
-          <MyButton/>
-          <JSXButton/>
-          <SFCButton/>
-      `,
-  };
+      <MyButton/>
+      <JSXButton/>
+      <SFCButton/>
+    `}).use(SmartyUI).mount('#app')
 
-  createApp(MyComponent).use(SmartyUI.default).mount("#app");
+  // createApp(JSXButton).mount("#app");
+
+
+
 </script>

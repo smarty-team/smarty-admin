@@ -16,17 +16,17 @@ export default defineConfig({
   plugins: [
     vue(),
     // 添加JSX插件
-    vueJsx({
-      // options are passed on to @vue/babel-plugin-jsx
-    }),
+    vueJsx(),
   ],
   build: {
-    // rollupOptions,
+    rollupOptions,
+    // sourcemap:'inline',
+    minify:false,
     lib: {
       entry: "./src/entry.ts",
       name: "SmartyUI",
       fileName: "smarty-ui",
-      formats: ["es", "umd"],
+      formats: ["es", "umd","iife"],
     },
   },
 });
