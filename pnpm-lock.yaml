@@ -141,7 +141,6 @@ importers:
       ts-jest: ^27.1.4
       typescript: ^4.6.3
       vue: ^3.2.31
-      vue-jest: 5.0.0-alpha.10
     dependencies:
       '@babel/core': registry.npmmirror.com/@babel/core/7.17.9
       '@babel/plugin-proposal-class-properties': registry.npmmirror.com/@babel/plugin-proposal-class-properties/7.16.7_@babel+core@7.17.9
@@ -182,7 +181,6 @@ importers:
       ts-jest: registry.npmmirror.com/ts-jest/27.1.4_e5fb0852f9419ae84240799a2f4ee178
       typescript: registry.npmmirror.com/typescript/4.6.3
       vue: registry.npmmirror.com/vue/3.2.33
-      vue-jest: registry.npmmirror.com/vue-jest/5.0.0-alpha.10_2c4e627186a6376fce501bbf5170c41e
     devDependencies:
       '@babel/cli': registry.npmmirror.com/@babel/cli/7.17.6_@babel+core@7.17.9
 
