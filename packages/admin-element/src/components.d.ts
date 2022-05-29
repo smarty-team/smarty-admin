@@ -12,7 +12,9 @@ declare module 'vue' {
     ElMenuItem: typeof import('element-plus/es/el-menu-item')['default']
     ElMenuItemGroup: typeof import('element-plus/es/el-menu-item-group')['default']
     ElSubmenu: typeof import('element-plus/es/el-submenu')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    IEpDataBoard: typeof import('~icons/ep/data-board')['default']
+    IEpShoppingBag: typeof import('~icons/ep/shopping-bag')['default']
   }
 }
 
