@@ -20,9 +20,14 @@
     "vue": "^3.2.36"
   },
   "devDependencies": {
+    "@iconify-json/ic": "^1.1.4",
     "@types/react": "^18.0.9",
+    "@unocss/preset-attributify": "^0.35.1",
+    "@unocss/preset-icons": "^0.30.10",
+    "@unocss/preset-uno": "^0.35.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "unocss": "^0.27.2",
     "vitepress": "^0.22.4",
     "vitepress-theme-demoblock": "^1.4.2"
   }
