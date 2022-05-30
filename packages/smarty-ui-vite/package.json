@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:dev": "vitepress dev docs --config ../vite.config.ts",
+    "docs:build": "vitepress build docs --config ../vite.config.ts",
+    "docs:serve": "vitepress serve docs --config ../vite.config.ts"
   },
   "keywords": [],
   "author": "",

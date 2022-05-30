@@ -11,7 +11,7 @@ import DemoBlock from 'vitepress-theme-demoblock/components/DemoBlock.vue'
 export default {
   ...Theme,
   enhanceApp({ app }) {
-    app.component('s-button', Button)
+    app.component(Button.name, Button)
     app.component('Demo', Demo)
     app.component('DemoBlock', DemoBlock)
   },
