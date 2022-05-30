@@ -10,10 +10,12 @@ declare module 'vue' {
     ElIcon: typeof import('element-plus/es/el-icon')['default']
     ElMenu: typeof import('element-plus/es/el-menu')['default']
     ElMenuItem: typeof import('element-plus/es/el-menu-item')['default']
-    ElMenuItemGroup: typeof import('element-plus/es/el-menu-item-group')['default']
     ElSubmenu: typeof import('element-plus/es/el-submenu')['default']
+    Footer: typeof import('./components/Footer.vue')['default']
+    Header: typeof import('./components/Header.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     IEpDataBoard: typeof import('~icons/ep/data-board')['default']
+    IEpDocumentAdd: typeof import('~icons/ep/document-add')['default']
     IEpShoppingBag: typeof import('~icons/ep/shopping-bag')['default']
   }
 }

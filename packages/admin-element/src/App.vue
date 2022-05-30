@@ -10,7 +10,7 @@
         <!-- logo -->
         <div class="head">
           <div>
-            <el-icon color="white" size="22" class="logo">
+            <el-icon color="white" :size="22" class="logo">
               <i-ep-shopping-bag></i-ep-shopping-bag>
             </el-icon>
             <span>Vue3-Admin</span>
@@ -23,24 +23,33 @@
               <span>Dashboard</span>
             </template>
             <!--二级栏目-->
-            <el-menu-item-group>
-              <el-menu-item index="/">
-                <el-icon :size="18" class="icon-menu">
-                  <i-ep-data-board />
-                </el-icon>
-                首页
-              </el-menu-item>
-            </el-menu-item-group>
+            <el-menu-item index="/">
+              <el-icon :size="18" class="icon-menu">
+                <i-ep-data-board />
+              </el-icon>
+              首页
+            </el-menu-item>
+            <el-menu-item index="/add">
+              <el-icon :size="18" class="icon-menu">
+                <i-ep-document-add></i-ep-document-add>
+              </el-icon>
+              新增商品
+            </el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
 
       <!-- 内容 -->
       <el-container class="content">
+        <!-- 头部 -->
+        <Header></Header>
+        <!-- 页面内容 -->
         <div class="main">
           <!--将 <router-view></router-view> 移到这里，并且用单标签-->
           <router-view />
         </div>
+        <!-- 底部 -->
+        <Footer></Footer>
       </el-container>
     </el-container>
   </div>
@@ -95,7 +104,7 @@ export default {
   overflow: hidden;
 }
 .main {
-  height: 100vh;
+  height: calc(100vh - 100px);
   overflow: auto;
   padding: 10px;
 }
