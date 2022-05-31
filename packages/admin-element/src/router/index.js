@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Index from '@/views/Index.vue'
 import AddProduct from '@/views/AddProduct.vue'
+import Login from '@/views/Login.vue'
 
 const router = createRouter({
   history: createWebHashHistory(), // hash 模式
@@ -19,6 +20,14 @@ const router = createRouter({
         title: '新增商品'
       }
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+      meta: {
+        showMenu: false
+      }
+    }
   ]
 })
 

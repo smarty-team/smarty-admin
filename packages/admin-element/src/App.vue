@@ -1,11 +1,6 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-</script>
-
 <template>
   <div class="layout">
-    <el-container class="container">
+    <el-container v-if="showMenu" class="container">
       <el-aside class="aside">
         <!-- logo -->
         <div class="head">
@@ -18,7 +13,7 @@
         </div>
         <el-menu background-color="#222832" text-color="#fff" :router="true">
           <!--一级栏目-->
-          <el-submenu index="1">
+          <el-sub-menu index="1">
             <template #title>
               <span>Dashboard</span>
             </template>
@@ -35,7 +30,7 @@
               </el-icon>
               新增商品
             </el-menu-item>
-          </el-submenu>
+          </el-sub-menu>
         </el-menu>
       </el-aside>
 
@@ -52,6 +47,9 @@
         <Footer></Footer>
       </el-container>
     </el-container>
+    <el-container v-else>
+      <router-view></router-view>
+    </el-container>
   </div>
 </template>
 
@@ -59,6 +57,37 @@
 export default {
   name: "App",
 };
+</script>
+
+<script setup>
+// 在进入除了/login之外的路由前判断用户是否拥有令牌，没有需要去登录
+const router = useRouter();
+router.beforeEach((to, from, next) => {
+  if (to.path == "/login") {
+    // 如果路径是 /login 则放行
+    next();
+  } else {
+    // 如果不是 /login，判断是否有令牌
+    if (!localStorage.getItem("token")) {
+      // 如果没有，则跳至登录页面
+      next({ path: "/login" });
+    } else {
+      // 否则继续执行
+      next();
+    }
+  }
+});
+
+// 监听路由变化，如果当前页面不需要菜单则隐藏之
+const showMenu = ref(false);
+const route = useRoute();
+watch(route, () => {
+  if (route.meta.showMenu === false) {
+    showMenu.value = false;
+  } else {
+    showMenu.value = true;
+  }
+});
 </script>
 
 <style scoped>

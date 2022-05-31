@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "element-plus": "1.0.2-beta.71",
+    "axios": "^0.27.2",
+    "element-plus": "2.2.2",
+    "js-md5": "^0.7.3",
     "vue": "^3.2.25",
     "vue-router": "^4.0.13"
   },

@@ -7,8 +7,8 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
-const pathRoot = path.resolve(__dirname, "./")
-const pathSrc = path.resolve(__dirname, 'src')
+const pathRoot = path.resolve(__dirname, "./");
+const pathSrc = path.resolve(__dirname, "src");
 
 // https://vitejs.dev/config/
 export default ({ mode }) =>
@@ -66,11 +66,13 @@ export default ({ mode }) =>
         : mode == "beta"
         ? "//s.xxx.com/beta/yyy"
         : "//s.xxx.com/release/yyy", // 静态资源路径配置
-    proxy: {
-      "/api": {
-        target: "http://backend-api-beta.xxx.com/manage-api/v1", // 凡是遇到 /api 路径的请求，都映射到 target 属性
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""), // 重写 api 为 空，就是去掉它
+    server: {
+      proxy: {
+        "/api": {
+          target: "http://121.36.13.39:28019/manage-api/v1", // 凡是遇到 /api 路径的请求，都映射到 target 属性
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ""), // 重写 api 为 空，就是去掉它
+        },
       },
     },
   });
