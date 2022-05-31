@@ -5,17 +5,17 @@
         <!-- logo -->
         <div class="head">
           <div>
-            <el-icon color="white" :size="22" class="logo">
-              <i-ep-shopping-bag></i-ep-shopping-bag>
+            <el-icon :size="32" class="logo">
+              <i-ep-element-plus></i-ep-element-plus>
             </el-icon>
-            <span>Vue3-Admin</span>
+            <span>SmartyAdmin</span>
           </div>
         </div>
         <el-menu background-color="#222832" text-color="#fff" :router="true">
           <!--一级栏目-->
           <el-sub-menu index="1">
             <template #title>
-              <span>Dashboard</span>
+              <span>看板</span>
             </template>
             <!--二级栏目-->
             <el-menu-item index="/">
@@ -139,6 +139,7 @@ watch(route, () => {
 }
 .logo {
   margin-right: 2px;
+  color: #3f9eff
 }
 .icon-menu {
   padding-bottom: 6px;
