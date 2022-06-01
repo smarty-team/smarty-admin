@@ -3,7 +3,9 @@ const sidebar = {
     { text: "介绍", link: "/" },
     {
       text: "通用",
-      children: [{ text: "Button 按钮", link: "/components/button/" }],
+      children: [
+        { text: "Button 按钮", link: "/components/button/" },
+      ],
     },
     { text: "导航" },
     { text: "反馈" },
@@ -13,8 +15,8 @@ const sidebar = {
   ],
 };
 const config = {
-  title: '🔨  Smarty-UI',
-  description: '组件库搭建的教学模型',
+  title: "🔨  Smarty-UI",
+  description: "组件库搭建的教学模型",
   themeConfig: {
     sidebar,
   },
