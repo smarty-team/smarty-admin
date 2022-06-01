@@ -36,7 +36,7 @@ export const props = {
 
 
 export default defineComponent({
-  name: "MyButton",
+  name: "SButton",
   props,
   setup(props, {slots}) {
     const size = {
@@ -50,7 +50,6 @@ export default defineComponent({
         x:'4',y:'2',text:'lg'
       }
     }
-
 
     return () => <button 
         class={`
