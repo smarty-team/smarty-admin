@@ -8,6 +8,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'index',
       component: Index,
       meta: {
         title: '首页'
@@ -15,6 +16,7 @@ const router = createRouter({
     },
     {
       path: '/add',
+      name: 'add',
       component: AddProduct,
       meta: {
         title: '新增商品'
