@@ -6,6 +6,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElForm: typeof import('element-plus/es')['ElForm']
@@ -25,7 +26,6 @@ declare module 'vue' {
     IEpDataBoard: typeof import('~icons/ep/data-board')['default']
     IEpDocumentAdd: typeof import('~icons/ep/document-add')['default']
     IEpElementPlus: typeof import('~icons/ep/element-plus')['default']
-    IEpShoppingBag: typeof import('~icons/ep/shopping-bag')['default']
   }
 }
 
