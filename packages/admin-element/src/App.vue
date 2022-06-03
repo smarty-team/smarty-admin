@@ -11,11 +11,17 @@
             <span>SmartyAdmin</span>
           </div>
         </div>
-        <el-menu background-color="#222832" text-color="#fff" :router="true">
+        <el-menu
+          background-color="#222832"
+          text-color="#fff"
+          :router="true"
+          :default-openeds="defaultOpen"
+          :default-active="currentPath"
+        >
           <!--一级栏目-->
           <el-sub-menu index="1">
             <template #title>
-              <span>看板</span>
+              <span>数据看板</span>
             </template>
             <!--二级栏目-->
             <el-menu-item index="/">
@@ -30,6 +36,18 @@
               </el-icon>
               新增商品
             </el-menu-item>
+          </el-sub-menu>
+          <el-sub-menu index="2">
+            <template #title>
+              <span>首页配置</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/swiper">
+                <el-icon :size="18" class="icon-menu">
+                  <i-ep-picture /> </el-icon
+                >轮播图配置</el-menu-item
+              >
+            </el-menu-item-group>
           </el-sub-menu>
         </el-menu>
       </el-aside>
@@ -81,12 +99,16 @@ router.beforeEach((to, from, next) => {
 // 监听路由变化，如果当前页面不需要菜单则隐藏之
 const showMenu = ref(false);
 const route = useRoute();
+const defaultOpen = ref(["1", "2"]);
+const currentPath = ref("/");
 watch(route, () => {
   if (route.meta.showMenu === false) {
     showMenu.value = false;
   } else {
     showMenu.value = true;
   }
+
+  currentPath.value = route.path;
 });
 </script>
 
@@ -139,7 +161,7 @@ watch(route, () => {
 }
 .logo {
   margin-right: 2px;
-  color: #3f9eff
+  color: #3f9eff;
 }
 .icon-menu {
   padding-bottom: 6px;

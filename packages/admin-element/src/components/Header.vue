@@ -35,12 +35,18 @@ export default {
 </script>
 <script setup>
 import axios from "@/utils/axios";
+import { onBeforeRouteUpdate } from "vue-router";
 
 const title = ref("首页");
 const route = useRoute();
-watch(route, () => {
-  title.value = route.meta.title;
-});
+watch(
+  route,
+  () => {
+    console.log(route.meta.title);
+    title.value = route.meta.title;
+  },
+  { immediate: true }
+);
 
 const router = useRouter();
 const userInfo = ref(null);

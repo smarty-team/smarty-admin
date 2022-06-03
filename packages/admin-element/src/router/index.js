@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Index from '@/views/Index.vue'
 import AddProduct from '@/views/AddProduct.vue'
 import Login from '@/views/Login.vue'
+import SwiperConfig from '@/views/SwiperConfig.vue'
 
 const router = createRouter({
   history: createWebHashHistory(), // hash 模式
@@ -28,6 +29,14 @@ const router = createRouter({
       component: Login,
       meta: {
         showMenu: false
+      }
+    },
+    {
+      path: '/swiper',
+      name: 'swiper',
+      component: SwiperConfig,
+      meta: {
+        title: '轮播图配置'
       }
     }
   ]
