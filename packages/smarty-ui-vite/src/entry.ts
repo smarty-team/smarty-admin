@@ -3,7 +3,7 @@ import { App } from "vue";
 import SButton from "./button";
 import SFCButton from "./SFCButton.vue";
 import JSXButton from "./JSXButton";
-
+import "uno.css";
 // 导出单独组件
 export { SButton, SFCButton, JSXButton };
 

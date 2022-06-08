@@ -3,11 +3,11 @@
 <link rel="stylesheet" href="../dist/style.css">
 <script type="module">
   import { createApp } from "vue/dist/vue.esm-bundler.js";
-  import SmartyUI, {SFCButton,JSXButton,MyButton} from "../dist/smarty-ui.es.js";
+  import SmartyUI, {SFCButton,JSXButton,SButton} from "../dist/smarty-ui.es.js";
 
   createApp({
     template: `
-      <MyButton/>
+      <SButton>Button</SButton>
       <JSXButton/>
       <SFCButton/>
     `}).use(SmartyUI).mount('#app')
