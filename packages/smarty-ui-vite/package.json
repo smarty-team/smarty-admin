@@ -30,6 +30,7 @@
     "@unocss/preset-icons": "^0.30.10",
     "@unocss/preset-uno": "^0.35.1",
     "@vitest/ui": "^0.14.0",
+    "c8": "^7.11.3",
     "happy-dom": "^4.0.0",
     "jsdom": "^19.0.0",
     "react": "^18.1.0",
