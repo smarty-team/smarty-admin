@@ -19,6 +19,7 @@
 │   ├── seed # admin空模板
 │   ├── docs  # 文档自动化
 │   ├── ui # 组件库
+│   ├── smarty-ui-vite # 组件库 (Vite版本)
 │   ├── admin # admin全量
 │   ├── cli # 脚手架工具
 ```
