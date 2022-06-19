@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 echo ====代码静态检查====
-cd packages/ui
-pnpm run lint
+cd packages/smarty-ui-vite
+pnpm lint
