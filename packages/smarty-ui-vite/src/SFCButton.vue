@@ -1,4 +1,3 @@
-
 <template>
   <button>SFC Button</button>
 </template>

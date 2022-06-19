@@ -1,125 +1,117 @@
 import Button from "../Button";
 
 import { shallowMount } from "@vue/test-utils";
-import { getByAltText, render } from "@testing-library/vue";
+import { render } from "@testing-library/vue";
 import { describe, expect, test } from "vitest";
 
-describe('Button', () => {
+describe("Button", () => {
   test("mount  @vue/test-utils", () => {
     // @vue/test-utils
     const wrapper = shallowMount(Button, {
       slots: {
-        default: 'Button'
-      }
+        default: "Button",
+      },
     });
     expect(wrapper.text()).toBe("Button");
-
   });
 
   test("mount  @testing-library/vue", () => {
     const { getByText } = render(Button, {
       slots: {
-        default: 'Button'
-      }
+        default: "Button",
+      },
     });
     // // assert output
     getByText("Button");
   });
 
-  describe('color', () => {
+  describe("color", () => {
     test("default", () => {
       const wrapper = shallowMount(Button, {
         slots: {
-          default: 'Button'
-        }
+          default: "Button",
+        },
       });
 
-      expect(wrapper.classes().includes('bg-blue-500')).toBe(true)
+      expect(wrapper.classes().includes("bg-blue-500")).toBe(true);
     });
-
 
     test("red", () => {
       const wrapper = shallowMount(Button, {
         slots: {
-          default: 'Button'
+          default: "Button",
         },
         props: {
-          color: 'red'
-        }
+          color: "red",
+        },
       });
 
-      expect(wrapper.classes().includes('bg-red-500')).toBe(true)
+      expect(wrapper.classes().includes("bg-red-500")).toBe(true);
     });
-  })
+  });
 
-
-  describe('round', () => {
+  describe("round", () => {
     test("default", () => {
       const wrapper = shallowMount(Button, {
         slots: {
-          default: 'Button'
-        }
+          default: "Button",
+        },
       });
 
-      expect(wrapper.classes().includes('rounded-lg')).toBe(true)
+      expect(wrapper.classes().includes("rounded-lg")).toBe(true);
     });
-
 
     test("round:true", () => {
       const wrapper = shallowMount(Button, {
         slots: {
-          default: 'Button'
+          default: "Button",
         },
         props: {
-          round: true
-        }
+          round: true,
+        },
       });
 
-      expect(wrapper.classes().includes('rounded-full')).toBe(true)
+      expect(wrapper.classes().includes("rounded-full")).toBe(true);
     });
-  })
+  });
 
-
-
-  describe('plain', () => {
+  describe("plain", () => {
     test("default", () => {
       const wrapper = shallowMount(Button, {
         slots: {
-          default: 'Button'
-        }
+          default: "Button",
+        },
       });
 
-      expect(wrapper.classes().includes('bg-blue-500')).toBe(true)
+      expect(wrapper.classes().includes("bg-blue-500")).toBe(true);
     });
-
 
     test("plain:true", () => {
       const wrapper = shallowMount(Button, {
         slots: {
-          default: 'Button'
+          default: "Button",
         },
         props: {
-          plain: true
-        }
+          plain: true,
+        },
       });
 
-      expect(wrapper.classes().includes('bg-blue-100')).toBe(true)
+      expect(wrapper.classes().includes("bg-blue-100")).toBe(true);
     });
-  })
+  });
 
   test("icon", () => {
     const wrapper = shallowMount(Button, {
       slots: {
-        default: 'Button'
+        default: "Button",
       },
       props: {
-        icon: 'edit'
-      }
+        icon: "edit",
+      },
     });
 
-    expect(wrapper.find('i').classes().includes('i-ic-baseline-edit')).toBe(true)
+    expect(wrapper.find("i").classes().includes("i-ic-baseline-edit")).toBe(
+      true
+    );
   });
-})
-
-
-
+});

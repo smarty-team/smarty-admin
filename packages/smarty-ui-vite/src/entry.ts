@@ -1,4 +1,3 @@
-
 import { App } from "vue";
 import SButton from "./button";
 import SFCButton from "./SFCButton.vue";
