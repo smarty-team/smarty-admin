@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo ======commit========= "$1"
+echo ======commit=========
 npx --no -- commitlint --edit "$1"
