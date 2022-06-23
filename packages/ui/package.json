@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest --watch",
-    "test:run": "jest --watch",
+    "test:run": "jest",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "lint": "eslint --no-error-on-unmatched-pattern --ext .vue --ext .ts --ext .jsx src/**/ --fix",
     "eslint": "eslint --fix --ext .ts,.vue src",
