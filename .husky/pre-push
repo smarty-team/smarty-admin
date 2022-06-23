@@ -4,3 +4,8 @@
 echo ====单元测试====
 cd packages/smarty-ui-vite
 pnpm test:run
+
+
+cd ../../
+cd packages/ui
+pnpm test
