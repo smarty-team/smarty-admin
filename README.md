@@ -11,18 +11,17 @@
 </p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/smarty-admin-ui"><img src="https://img.shields.io/npm/v/smarty-admin-ui?color=c95f8b&amp;label=" alt="NPM version"></a>
-[![CI](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml)
-
-
-</p>
-
-
+<a href="https://www.npmjs.com/package/smarty-admin-ui"><img src="https://img.shields.io/npm/v/smarty-admin-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 
 <br>
 <br>
 
 ## Features
+---
+[![CI](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml)
+
+# 特性
+
 前端工程化演示项目。
 
 - Monorepo风格 (pnpm workspace)
@@ -31,7 +30,7 @@
 - SSG风格文档自动化工具
 - seed项目模板
 
-## 目录说明
+# 目录说明
 ```bash
 │   packages
 │   ├── seed # admin空模板
