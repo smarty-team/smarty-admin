@@ -1,7 +1,7 @@
 <template>
   <button>SFC 666</button>
 </template>
-<script lang="ts">
+<script>
 export default {
   name: "SFCButton",
 };

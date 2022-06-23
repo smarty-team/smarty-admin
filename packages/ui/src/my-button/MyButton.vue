@@ -1,7 +1,7 @@
 <template>
   <button>MyButton</button>
 </template>
-<script lang="ts">
+<script>
 export default {
   name: "MyButton",
 };
