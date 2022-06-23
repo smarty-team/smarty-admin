@@ -38,8 +38,8 @@ jobs:
         version: 6.31.0
     - name: Install modules
       run: pnpm install
-    - name: Run Lint
-      run: cd packages/ui && pnpm run test
+    - name: Run Test
+      run: cd packages/ui && pnpm run test:run
   PreBuild:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
