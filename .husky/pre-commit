@@ -5,7 +5,6 @@ echo ====代码静态检查====
 cd packages/smarty-ui-vite
 pnpm lint
 
-pwd
 cd ../../
 cd packages/ui
 pnpm lint
