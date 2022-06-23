@@ -1,5 +1,3 @@
-//  console.log 和 console.error 中插入代码的位置信息
-//一些参数的功能。
 const parser = require('@babel/parser')
 const traverse = require('@babel/traverse').default
 const generator = require('@babel/generator').default
@@ -7,26 +5,30 @@ const types = require('@babel/types')
 const fs = require('fs')
 const fileName = 'source.tsx'
 
-const source = fs.readFileSync(fileName).toString()
+// 读取文件
+const source = fs.readFileSync(__dirname + '/' + fileName).toString()
 
+// 转换AST
 const ast = parser.parse(source, {
     plugins: ['typescript', 'jsx']
 })
 
+console.log('ast', ast)
+
+// walker
 traverse(ast, {
+    // 访问者
     CallExpression(path) {
         const calleeStr = generator(path.node.callee).code
-        console.log('calleeStr:', calleeStr)
+        console.log('calleeStr', calleeStr)
         if (['console.log', 'console.error'].includes(calleeStr)) {
             const { line, column } = path.node.loc.start
-            path.node.arguments.unshift(types.stringLiteral(`${fileName}(${line},${column}):`))
-
+            path.node.arguments.unshift(types.stringLiteral(`${fileName}(${line} ,${column})`))
         }
     }
 })
 
-const { code, map } = generator(ast, {
-    sourceMaps: true,
+const { code } = generator(ast, {
     fileName
 })
-console.log('code ', code)
+console.log('code:', code)
