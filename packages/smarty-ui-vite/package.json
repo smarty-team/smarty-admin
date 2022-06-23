@@ -12,6 +12,7 @@
     "docs:build": "vitepress build docs --config ../vite.config.ts",
     "docs:serve": "vitepress serve docs --config ../vite.config.ts",
     "test": "vitest",
+    "test:run": "vitest run",
     "coverage": "c8 vitest run --coverage"
   },
   "keywords": [],
