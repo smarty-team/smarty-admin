@@ -21,12 +21,10 @@
             aria-current="page"><span
               class="inline-flex justify-center items-center w-12 h-6 flex-none font-bold text-white"><i
                 class="i-mdi-television"></i></span><span class="grow font-bold text-white">Dashboard</span>
-            <!--v-if-->
           </a>
-          <!--v-if-->
         </li>
       </ul>
-      <p class="p-3 text-xs uppercase text-gray-400">Examples</p>
+      <p class="p-3 text-xs uppercase text-gray-400">课程</p>
       <ul>
         <li>
           <a class="flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"><span
