@@ -1,7 +1,7 @@
 // const s : string = 'Hello Vite 666'
 // document.querySelector('#app')['innerText'] = s
 
-import { createApp, h } from "vue";
+import { createApp, } from "vue";
 
 // import generatedRoutes from 'virtual:generated-pages'
 

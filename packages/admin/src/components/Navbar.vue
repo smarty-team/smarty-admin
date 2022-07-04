@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const router = useRouter()
+</script>
+
 <template>
   <nav
     class="top-0 left-0 right-0 fixed flex bg-white h-14 border-b z-30 w-screen transition-position xl:pl-60 lg:w-auto lg:items-stretch dark:bg-gray-900 dark:border-gray-800 border-gray-100"
@@ -27,7 +31,7 @@
         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
         <div class="flex-1 md:flex md:items-center md:justify-between">
           <div class="flex flex-col -mx-4 md:flex-row md:items-center md:mx-8">
-            <a href="#"
+            <!-- <a href="#"
               class="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700">Join
               Slack</a>
             <a href="#"
@@ -37,7 +41,7 @@
               class="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700">Random
               Item</a>
             <a href="#"
-              class="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700">Experts</a>
+              class="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700">Experts</a> -->
           </div>
 
           <div class="flex items-center mt-4 md:mt-0">
@@ -51,11 +55,10 @@
               </svg>
             </button>
 
-            <button type="button" class="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
+            <button type="button" @click="router.push('/login')" class="flex items-center focus:outline-none"
+              aria-label="toggle profile dropdown">
               <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                <img
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-                  class="object-cover w-full h-full" alt="avatar">
+                <img src="../assets/login/ranshu.png" class="object-cover w-full h-full" alt="avatar">
               </div>
 
               <h3 class="mx-2 text-sm font-medium text-gray-700 dark:text-gray-200 md:hidden">Khatab wedaa</h3>

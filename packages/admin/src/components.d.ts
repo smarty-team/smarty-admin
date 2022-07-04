@@ -10,7 +10,6 @@ declare module 'vue' {
     Navbar: typeof import('./components/Navbar.vue')['default']
     SideMenu: typeof import('./components/SideMenu.vue')['default']
     TeamCard: typeof import('./components/main/TeamCard.vue')['default']
-    V1: typeof import('./components/V1.vue')['default']
   }
 }
 
