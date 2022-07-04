@@ -12,7 +12,6 @@
   "dependencies": {
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
     "@mdi/js": "^6.5.95",
-    "smarty-admin-ui": "workspace:^0.1.0",
     "@types/node": "^17.0.21",
     "@unocss/runtime": "^0.29.5",
     "@vitejs/plugin-vue": "^2.2.2",
