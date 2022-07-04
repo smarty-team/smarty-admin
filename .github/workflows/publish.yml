@@ -19,7 +19,7 @@ jobs:
         with:
           version: 7.2.1
       - name: Install modules
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
       - name: Build 
         run: cd packages/ui && npm run build 
       - name: 'Publish to the npm registry'
