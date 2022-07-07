@@ -3,7 +3,3 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
-
-.btn {
-    @apply bg-blue-500 text-white;
-}
