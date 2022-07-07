@@ -81,7 +81,7 @@ export default {
         cursor-pointer
         border-2
         border-${props.color}-400
-        text-${props.plain ? props.color + "-500" : "white-500"}
+        text-${props.plain ? props.color + "-500" : "white"}
         text-${size[props.size].text}
         hover:text-white
         transition duration-300 ease-in-out transform hover:scale-105

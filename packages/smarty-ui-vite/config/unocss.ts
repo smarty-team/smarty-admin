@@ -14,6 +14,7 @@ const colors = [
   "pink",
 ];
 const safelist = [
+
   ...colors.map((v) => `bg-${v}-100`),
   ...colors.map((v) => `bg-${v}-400`),
   ...colors.map((v) => `bg-${v}-500`),
