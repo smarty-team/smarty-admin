@@ -10,7 +10,11 @@ const colors = [
   "purple",
   "pink",
 ];
+
+
+
 const safelist = [
+
   ...colors.map((v) => `bg-${v}-100`),
   ...colors.map((v) => `bg-${v}-400`),
   ...colors.map((v) => `bg-${v}-500`),
@@ -37,6 +41,7 @@ const safelist = [
     "add",
     "share",
   ].map((v) => `i-ic-baseline-${v}`),
+
 ];
 
 module.exports = {
@@ -48,8 +53,6 @@ module.exports = {
   purge: {
     safelist
   },
-
-  whitelistPatterns: ['^bg\-', '^text\-'],
   theme: {
     extend: {
       zIndex: {
