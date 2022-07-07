@@ -9,7 +9,7 @@ export default {
   install(app: App) {
     // app.component(MyButtonOrigin.name, MyButtonOrigin);
     app.component(MyButton.name, MyButton)
-    // app.component(JSXButton.name, JSXButton);
+    app.component(JSXButton.name, JSXButton);
     app.component(SFCButton.name, SFCButton);
   },
 };
