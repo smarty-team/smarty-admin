@@ -8,4 +8,4 @@ pnpm test:run
 
 cd ../../
 cd packages/ui
-# pnpm test:run
+pnpm test:run
