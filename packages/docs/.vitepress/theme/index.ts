@@ -1,6 +1,7 @@
 import Theme from 'vitepress/dist/client/theme-default'
 // import Button from '../../../src/button'
-import SmartyUI from 'smarty-admin-ui'
+import SmartyUI from 'smarty-ui-rollup'
+import 'smarty-ui-rollup/dist/smarty-ui-rollup.esm.css'
 
 // 主题样式
 import 'vitepress-theme-demoblock/theme/styles/index.css'

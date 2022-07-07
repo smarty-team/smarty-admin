@@ -1,5 +1,6 @@
 **/node_modules/
 **/coverage/
+**/.pnpm-debug
 package-lock.json
 .DS_Store
 .spress

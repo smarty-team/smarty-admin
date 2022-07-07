@@ -11,38 +11,38 @@
 ```vue
 <template>
   <div style="margin-bottom:20px;">
-    <MyButton color="blue">主要按钮</MyButton>
-    <MyButton color="green">绿色按钮</MyButton>
-    <MyButton color="gray">灰色按钮</MyButton>
-    <MyButton color="yellow">黄色按钮</MyButton>
-    <MyButton color="red">红色按钮</MyButton>
+    <SButton color="blue">主要按钮</SButton>
+    <SButton color="green">绿色按钮</SButton>
+    <SButton color="gray">灰色按钮</SButton>
+    <SButton color="yellow">黄色按钮</SButton>
+    <SButton color="red">红色按钮</SButton>
   </div>
   <div style="margin-bottom:20px;"
   >
-    <MyButton color="blue" plain>朴素按钮</MyButton>
-    <MyButton color="green" plain>绿色按钮</MyButton>
-    <MyButton color="gray" plain>灰色按钮</MyButton>
-    <MyButton color="yellow" plain>黄色按钮</MyButton>
-    <MyButton color="red" plain>红色按钮</MyButton>
+    <SButton color="blue" plain>朴素按钮</SButton>
+    <SButton color="green" plain>绿色按钮</SButton>
+    <SButton color="gray" plain>灰色按钮</SButton>
+    <SButton color="yellow" plain>黄色按钮</SButton>
+    <SButton color="red" plain>红色按钮</SButton>
   </div>
   <div style="margin-bottom:20px;">
-    <MyButton size="small" plain>小按钮</MyButton>
-    <MyButton size="medium" plain>中按钮</MyButton>
-    <MyButton size="large" plain>大按钮</MyButton>
+    <SButton size="small" plain>小按钮</SButton>
+    <SButton size="medium" plain>中按钮</SButton>
+    <SButton size="large" plain>大按钮</SButton>
   </div>
   <div style="margin-bottom:20px;">
-    <MyButton color="blue" round plain icon="search">搜索按钮</MyButton>
-    <MyButton color="green" round plain icon="edit">编辑按钮</MyButton>
-    <MyButton color="gray" round plain icon="check">成功按钮</MyButton>
-    <MyButton color="yellow" round plain icon="message">提示按钮</MyButton>
-    <MyButton color="red" round plain icon="delete">删除按钮</MyButton>
+    <SButton color="blue" round plain icon="search">搜索按钮</SButton>
+    <SButton color="green" round plain icon="edit">编辑按钮</SButton>
+    <SButton color="gray" round plain icon="check">成功按钮</SButton>
+    <SButton color="yellow" round plain icon="message">提示按钮</SButton>
+    <SButton color="red" round plain icon="delete">删除按钮</SButton>
   </div>
   <div style="margin-bottom:20px;">
-    <MyButton color="blue" round plain icon="search"></MyButton>
-    <MyButton color="green" round plain icon="edit"></MyButton>
-    <MyButton color="gray" round plain icon="check"></MyButton>
-    <MyButton color="yellow" round plain icon="message"></MyButton>
-    <MyButton color="red" round plain icon="delete"></MyButton>
+    <SButton color="blue" round plain icon="search"></SButton>
+    <SButton color="green" round plain icon="edit"></SButton>
+    <SButton color="gray" round plain icon="check"></SButton>
+    <SButton color="yellow" round plain icon="message"></SButton>
+    <SButton color="red" round plain icon="delete"></SButton>
   </div>
 </template>
 ```
@@ -58,10 +58,10 @@
 ```vue
 <template>
   <div class="flex flex-row">
-    <MyButton icon="edit" plain></MyButton>
-    <MyButton icon="delete" plain></MyButton>
-    <MyButton icon="share" plain></MyButton>
-    <MyButton round plain icon="search">搜索</MyButton>
+    <SButton icon="edit" plain></SButton>
+    <SButton icon="delete" plain></SButton>
+    <SButton icon="share" plain></SButton>
+    <SButton round plain icon="search">搜索</SButton>
   </div>
 </template>
 ```
