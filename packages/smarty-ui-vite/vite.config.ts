@@ -4,7 +4,7 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import UnoCss from "./config/unocss";
 const rollupOptions = {
-  external: ["vue", "vue-router"],
+  external: ["vue"],
   output: {
     globals: {
       vue: "Vue",
@@ -23,12 +23,14 @@ export default defineConfig({
   ],
   build: {
     rollupOptions,
-    minify: false,
+    minify: 'terser', // boolean | 'terser' | 'esbuild'
+    sourcemap: true, // 输出单独 source文件
+    brotliSize: true,  // 生成压缩大小报告
     lib: {
       entry: "./src/entry.ts",
       name: "SmartyUI",
       fileName: "smarty-ui",
-      formats: ["es", "umd", "iife"],
+      formats: ["es", "umd", "iife"], // 导出模块类型
     },
   },
 
