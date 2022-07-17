@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./src/*.*"
+    "lint": "eslint ./src/*.*",
+    "format": "prettier --write \"src/**/*.*\" "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@typescript-eslint/parser": "^5.30.6",
-    "eslint": "^8.0.0",
-    "typescript": "^4.6.3",
+    "eslint": "^8.20.0",
+    "prettier": "^2.6.2",
     "vue-eslint-parser": "^9.0.3"
   }
 }
