@@ -8,7 +8,7 @@ module.exports = {
     },
     globals: {
         ga: true,
-        chrome: true,
+        chrome: false,
         __DEV__: true
     },
     // 解析 .vue 文件
