@@ -457,17 +457,27 @@ importers:
 
   packages/utils/babel:
     specifiers:
+      '@babel/cli': ^7.18.9
       '@babel/core': ^7.13.16
       '@babel/generator': ^7.18.2
       '@babel/parser': ^7.13.16
       '@babel/traverse': ^7.13.17
       '@babel/types': ^7.14.8
+      babel-cli: ^6.26.0
     dependencies:
+      '@babel/cli': 7.18.9_@babel+core@7.18.6
       '@babel/core': 7.18.6
       '@babel/generator': 7.18.7
       '@babel/parser': 7.18.6
       '@babel/traverse': 7.18.6
       '@babel/types': 7.18.7
+      babel-cli: 6.26.0
+
+  packages/utils/babel-basic:
+    specifiers:
+      babel-plugin-transform-es2015-arrow-functions: ^6.22.0
+    devDependencies:
+      babel-plugin-transform-es2015-arrow-functions: 6.22.0
 
   packages/utils/eslint-prettier:
     specifiers:
@@ -644,6 +654,26 @@ packages:
       chokidar: 3.5.3
     dev: true
 
+  /@babel/cli/7.18.9_@babel+core@7.18.6:
+    resolution: {integrity: sha512-e7TOtHVrAXBJGNgoROVxqx0mathd01oJGXIDekRfxdrISnRqfM795APwkDtse9GdyPYivjg3iXiko3sF3W7f5Q==}
+    engines: {node: '>=6.9.0'}
+    hasBin: true
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.6
+      '@jridgewell/trace-mapping': 0.3.14
+      commander: 4.1.1
+      convert-source-map: 1.8.0
+      fs-readdir-recursive: 1.1.0
+      glob: 7.2.3
+      make-dir: 2.1.0
+      slash: 2.0.0
+    optionalDependencies:
+      '@nicolo-ribaudo/chokidar-2': 2.1.8-no-fsevents.3
+      chokidar: 3.5.3
+    dev: false
+
   /@babel/cli/7.18.9_@babel+core@7.18.9:
     resolution: {integrity: sha512-e7TOtHVrAXBJGNgoROVxqx0mathd01oJGXIDekRfxdrISnRqfM795APwkDtse9GdyPYivjg3iXiko3sF3W7f5Q==}
     engines: {node: '>=6.9.0'}
@@ -679,7 +709,7 @@ packages:
     engines: {node: '>=6.9.0'}
 
   /@babel/core/7.18.6:
-    resolution: {integrity: sha512-cQbWBpxcbbs/IUredIPkHiAGULLV8iwgNRMFzvbhEXISp4f3rUUXE5+TIw6KwUWUR3DwyI6gmBRnmAtYaWehwQ==, registry: https://registry.npm.taobao.org/}
+    resolution: {integrity: sha512-cQbWBpxcbbs/IUredIPkHiAGULLV8iwgNRMFzvbhEXISp4f3rUUXE5+TIw6KwUWUR3DwyI6gmBRnmAtYaWehwQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@babel/core/-/core-7.18.6.tgz}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@ampproject/remapping': 2.2.0
@@ -766,7 +796,7 @@ packages:
       '@babel/types': 7.18.9
 
   /@babel/helper-compilation-targets/7.18.6_@babel+core@7.18.6:
-    resolution: {integrity: sha512-vFjbfhNCzqdeAtZflUFrG5YIFqGTqsctrtkZ1D/NB0mDW9TwW3GmmUepYY4G9wCET5rY5ugz4OGTcLd614IzQg==, registry: https://registry.npm.taobao.org/}
+    resolution: {integrity: sha512-vFjbfhNCzqdeAtZflUFrG5YIFqGTqsctrtkZ1D/NB0mDW9TwW3GmmUepYY4G9wCET5rY5ugz4OGTcLd614IzQg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@babel/helper-compilation-targets/-/helper-compilation-targets-7.18.6.tgz}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -1081,7 +1111,7 @@ packages:
       - supports-color
 
   /@babel/helpers/7.18.6:
-    resolution: {integrity: sha512-vzSiiqbQOghPngUYt/zWGvK3LAsPhz55vc9XNN0xAl2gV4ieShI2OQli5duxWHD+72PZPTKAcfcZDE1Cwc5zsQ==, registry: https://registry.npm.taobao.org/}
+    resolution: {integrity: sha512-vzSiiqbQOghPngUYt/zWGvK3LAsPhz55vc9XNN0xAl2gV4ieShI2OQli5duxWHD+72PZPTKAcfcZDE1Cwc5zsQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@babel/helpers/-/helpers-7.18.6.tgz}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/template': 7.18.6
@@ -3647,7 +3677,6 @@ packages:
   /@nicolo-ribaudo/chokidar-2/2.1.8-no-fsevents.3:
     resolution: {integrity: sha512-s88O1aVtXftvp5bCPB7WnmXc5IwOZZ7YPuwNPt+GtOOXpPvad1LfbmjYv+qII7zP6RU2QGnqve27dnLycEnyEQ==}
     requiresBuild: true
-    dev: true
     optional: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -6327,7 +6356,7 @@ packages:
     dev: true
 
   /babel-plugin-transform-es2015-arrow-functions/6.22.0:
-    resolution: {integrity: sha512-PCqwwzODXW7JMrzu+yZIaYbPQSKjDTAsNNlK2l5Gg9g4rz2VzLnZsStvp/3c46GfXpwkyufb3NCyG9+50FF1Vg==, registry: https://registry.npm.taobao.org/}
+    resolution: {integrity: sha512-PCqwwzODXW7JMrzu+yZIaYbPQSKjDTAsNNlK2l5Gg9g4rz2VzLnZsStvp/3c46GfXpwkyufb3NCyG9+50FF1Vg==}
     dependencies:
       babel-runtime: 6.26.0
 
@@ -7628,7 +7657,6 @@ packages:
   /commander/4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
-    dev: true
 
   /commander/7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
@@ -12011,7 +12039,6 @@ packages:
     dependencies:
       pify: 4.0.1
       semver: 5.7.1
-    dev: true
 
   /make-dir/3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
@@ -12970,7 +12997,6 @@ packages:
   /pify/4.0.1:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
-    dev: true
 
   /pify/5.0.0:
     resolution: {integrity: sha512-eW/gHNMlxdSP6dmG6uJip6FXN0EQBwm2clYYd8Wul42Cwu/DK8HEftzsapcNdYe2MfLiIwZqsDk2RDEsTE79hA==, registry: https://registry.npm.taobao.org/}
@@ -14881,7 +14907,6 @@ packages:
   /slash/2.0.0:
     resolution: {integrity: sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==}
     engines: {node: '>=6'}
-    dev: true
 
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==, registry: https://registry.npm.taobao.org/}
