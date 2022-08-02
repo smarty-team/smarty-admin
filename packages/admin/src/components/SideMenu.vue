@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
 const courses = reactive([
-  { name: 'Vue全家桶', icon: '', url: '' },
-  { name: 'React18全家桶', icon: '', url: '' },
+  { name: 'Vue全家桶', icon: '', url: '/vue' },
+  { name: 'React18全家桶', icon: '', url: '/react' },
   { name: 'TypeScript基础', icon: '', url: '' },
   { name: 'Node与服务器端', icon: '', url: '' },
   { name: '算法与数据结构', icon: '', url: '' },
@@ -44,8 +44,8 @@ const courses = reactive([
       <p class="p-3 text-xs uppercase text-gray-400">课程</p>
       <ul>
         <li v-for="(item, index) in courses" :key="index">
-          <a class="flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"><span
-              class="inline-flex justify-center items-center w-12 h-6 flex-none text-gray-300"><i
+          <a class="flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
+            :href="item.url"><span class="inline-flex justify-center items-center w-12 h-6 flex-none text-gray-300"><i
                 class="i-mdi-table"></i></span><span class="grow text-gray-300">{{ item.name }}</span>
           </a>
         </li>
