@@ -36,7 +36,7 @@ const courses = reactive([
       <ul>
         <li>
           <a class="router-link-active router-link-exact-active flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
-            aria-current="page"><span
+            aria-current="page" href="/"><span
               class="inline-flex justify-center items-center w-12 h-6 flex-none font-bold text-white"><i
                 class="i-mdi-television"></i></span><span class="grow font-bold text-white">Dashboard</span>
           </a>
