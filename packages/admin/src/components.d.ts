@@ -6,6 +6,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     Content: typeof import('./components/main/Content.vue')['default']
     FooterContent: typeof import('./components/FooterContent.vue')['default']
+    Langaage: typeof import('./components/Language.vue')['default']
+    Language: typeof import('./components/Language.vue')['default']
     MainTitle: typeof import('./components/main/MainTitle.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     SideMenu: typeof import('./components/SideMenu.vue')['default']

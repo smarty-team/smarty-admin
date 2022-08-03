@@ -1,4 +1,9 @@
 {
-  "language": "Language",
-  "hello": "hello, world!"
+  "language": "English",
+  "hello": "hello, world!",
+  "courses":"Courses",
+  "dashboard":"Dashboard",
+  "yangcunzhang":"Yang Sir",
+  "ranshu":"JosephXia",
+  "gaomeimei":"Bubucuo"
 }

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Language from './Language.vue';
 const router = useRouter()
 </script>
 
@@ -45,6 +46,7 @@ const router = useRouter()
           </div>
 
           <div class="flex items-center mt-4 md:mt-0">
+            <Language></Language>
             <button
               class="hidden mx-4 text-gray-600 transition-colors duration-200 transform md:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
               aria-label="show notifications">

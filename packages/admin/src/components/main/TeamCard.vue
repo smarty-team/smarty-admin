@@ -17,7 +17,7 @@
                 </div>
                 <div class="text-center">
                     <p class="text-2xl text-gray-800 dark:text-white">
-                        杨村长
+                        {{ t("yangcunzhang") }}
                     </p>
                     <p class="text-xl text-gray-500 dark:text-gray-200 font-light">
                         Vue专家
@@ -83,7 +83,7 @@
                 </div>
                 <div class="text-center">
                     <p class="text-2xl text-gray-800 dark:text-white">
-                        全栈然叔
+                        {{ t("ranshu") }}
                     </p>
                     <p class="text-xl text-gray-500 dark:text-gray-200 font-light">
                         全栈工程师
@@ -150,7 +150,7 @@
                 </div>
                 <div class="text-center">
                     <p class="text-2xl text-gray-800 dark:text-white">
-                        高美美
+                        {{ t("gaomeimei") }}
                     </p>
                     <p class="text-xl text-gray-500 dark:text-gray-200 font-light">
                         React专家
@@ -210,3 +210,8 @@
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n()
+
+</script>

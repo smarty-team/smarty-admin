@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n()
 
 const courses = reactive([
   { name: 'Vue全家桶', icon: '', url: '/vue' },
@@ -41,7 +42,7 @@ const courses = reactive([
           </a>
         </li>
       </ul>
-      <p class="p-3 text-xs uppercase text-gray-400">课程</p>
+      <p class="p-3 text-xs uppercase text-gray-400">{{ t("courses") }}</p>
       <ul>
         <li v-for="(item, index) in courses" :key="index">
           <a class="flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
