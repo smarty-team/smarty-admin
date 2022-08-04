@@ -36,7 +36,7 @@ export default defineConfig({
 
     Components({
       // 增加 src/**/components 支持页面中的子组件自动加载
-      dirs: ['src/components','src/**/components'],
+      dirs: ['src/components', 'src/**/components'],
       // allow auto load markdown components under `./src/components/`
       extensions: ["vue", "md"],
       // allow auto import and register components used in markdown
