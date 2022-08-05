@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:components": "ts-node ./scripts/build.ts",
     "lint": "eslint --fix --ext .ts,.tsx,.vue src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "docs:dev": "vitepress dev docs --config ../vite.config.ts",
@@ -20,6 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "@vitejs/plugin-vue": "^2.3.3",
@@ -32,8 +34,10 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.6.0",
+    "fs-extra": "^10.1.0",
     "prettier": "^2.6.2",
     "smarty-ui-vite": "workspace:^0.1.0",
+    "ts-node": "^10.9.1",
     "vite": "^2.9.9",
     "vue": "^3.2.37"
   },
@@ -50,7 +54,7 @@
     "jsdom": "^19.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "unocss": "^0.27.2",
+    "unocss": "^0.33.4",
     "vitepress": "^0.22.4",
     "vitepress-theme-demoblock": "^1.4.2",
     "vitest": "^0.14.0"
