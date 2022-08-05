@@ -19,13 +19,12 @@ const buildAll = async () => {
       return isDir && fs.readdirSync(componentDir).includes("index.ts");
     })
     .forEach(async (name) => {
-      console.log(name);
       const outDir = path.resolve(config.build.outDir, name)
       const custom = {
         lib: {
           entry: path.resolve(srcDir, name),
           name, // 导出模块名
-          fileName: name,
+          fileName: `index`,
           formats: [`es`, `umd`],
         },
         outDir,
