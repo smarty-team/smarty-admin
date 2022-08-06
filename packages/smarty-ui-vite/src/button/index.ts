@@ -1,10 +1,10 @@
 import Button from "./Button";
 import { App } from "vue";
 
-// 具名导出
+// 导出Button组件
 export { Button };
 
-// 导出插件
+// 导出Vue插件
 export default {
   install(app: App) {
     app.component(Button.name, Button);

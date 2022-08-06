@@ -19,7 +19,7 @@ const buildAll = async () => {
       return isDir && fs.readdirSync(componentDir).includes("index.ts");
     })
     .forEach(async (name) => {
-      const outDir = path.resolve(config.build.outDir, name)
+      const outDir = path.resolve(config.build.outDir, name);
       const custom = {
         lib: {
           entry: path.resolve(srcDir, name),
@@ -31,20 +31,18 @@ const buildAll = async () => {
       };
 
       Object.assign(config.build, custom);
-      await build(defineConfig(config as UserConfig) as InlineConfig)
+      await build(defineConfig(config as UserConfig) as InlineConfig);
 
       fs.outputFile(
         path.resolve(outDir, `package.json`),
         `{
-          "name": "${name}",
+          "name": "smarty-ui-vite/${name}",
           "main": "index.umd.js",
           "module": "index.umd.js",
         }`,
         `utf-8`
       );
-
     });
-
 };
 
 buildAll();
