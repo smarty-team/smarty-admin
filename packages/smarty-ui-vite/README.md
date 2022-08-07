@@ -27,6 +27,7 @@
 - Jest + Vue3 plugins实现单元测试
 - Eslint + Prettier + Husky 语法检查
 - 采用Rollup构建
+- Vitepress + Vercel 文档网站搭建
 - 基于Action CI 实现持续集成与交付
 
 ## Install
@@ -65,4 +66,6 @@ Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in disc
 
 
 ## LICENSE
-[MIT](LICENSE)
+[MIT](../../LICENSE)
+
+Copyright (c) 2022 - present Ran (Joseph) Xia
