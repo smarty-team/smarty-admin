@@ -1,13 +1,13 @@
 # .github/workflows/main.yml
 # This is a basic workflow to help you get started with Actions
 
-name: Publish UI Vite To Netlify 
+name: Publish UI Vite To Netlify
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,14 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
-    - uses: pnpm/action-setup@v2.1.0
-      with:
-        version: 7.2.1
-    - name: Install modules
-      run: pnpm install
-    - name: Run Lint
-      run: cd packages/smarty-ui-vite && pnpm docs:build
-      run: netlify deploy --prod --dir=docs/.vitepress/dist
-
-
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7.2.1
+      - name: Install modules
+        run: pnpm install
+      - name: Run Build
+        run: cd packages/smarty-ui-vite && pnpm docs:build
+      - name: Run Publish
+        run: netlify deploy --prod --dir=docs/.vitepress/dist
