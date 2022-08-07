@@ -29,6 +29,7 @@
 - 采用Rollup构建
 - Vitepress + Vercel 文档网站搭建
 - 基于Action CI 实现持续集成与交付
+
 <img src="https://github.com/smarty-team/smarty-admin/blob/main/assets/demo.gif" style="width:50%;" />
 ## Install
 
