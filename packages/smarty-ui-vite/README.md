@@ -32,29 +32,9 @@
 
 <img src="https://github.com/smarty-team/smarty-admin/blob/main/assets/demo.gif" style="width:80%;" />
 
-## Install
-
-```bash
-npm i smarty-admin-ui
-```
-
 ## Quick Start
+希望尽快上手 Smarty-UI，可以浏览 [Getting Started](https://smarty-admin.vercel.app/).
 
-```js
-    import Vue from 'vue'
-    import SmartyUI from 'element-ui'
-
-    const App = {
-        template: `
-                <MyButton/>
-            `,
-    };
-
-    createApp(App)
-        .use(SmartyUI)
-        .mount("#app");
-
-```
 
 ## Browser Support
 
