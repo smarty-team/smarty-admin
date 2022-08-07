@@ -1,7 +1,7 @@
 <br>
 
 <p align="center">
-<img src="https://github.com/smarty-team/smarty-admin/blob/main/assets/logo.jpeg" style="width:200px;" />
+<img src="https://github.com/smarty-team/smarty-admin/blob/main/assets/logo.jpeg" style="width:50%;" />
 </p>
 
 <h1 align="center">Smarty-Admin-UI</h1>
@@ -29,7 +29,7 @@
 - 采用Rollup构建
 - Vitepress + Vercel 文档网站搭建
 - 基于Action CI 实现持续集成与交付
-
+<img src="https://github.com/smarty-team/smarty-admin/blob/main/assets/demo.gif" style="width:50%;" />
 ## Install
 
 ```bash
