@@ -16,6 +16,8 @@
     "@unocss/runtime": "^0.29.5",
     "@vitejs/plugin-vue": "^2.2.2",
     "@vitejs/plugin-vue-jsx": "^1.3.7",
+    "@vueuse/core": "^9.1.0",
+    "@vueuse/head": "^0.7.9",
     "pinia": "^2.0.11",
     "unocss": "^0.27.2",
     "unplugin-auto-import": "^0.6.1",

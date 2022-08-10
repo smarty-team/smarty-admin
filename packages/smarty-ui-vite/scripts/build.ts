@@ -38,8 +38,8 @@ const buildAll = async () => {
         `{
           "name": "smarty-ui-vite/${name}",
           "main": "index.umd.js",
-          "module": "index.umd.js",
-        }`,
+          "module": "index.umd.js"
+}`,
         `utf-8`
       );
     });
