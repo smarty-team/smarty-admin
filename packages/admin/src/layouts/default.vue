@@ -4,7 +4,9 @@
       <div class="bg-white text-base dark:bg-gray-800 dark:text-gray-100">
         <navbar></navbar>
         <side-menu></side-menu>
-        <router-view />
+        <div id="main">
+          <router-view />
+        </div>
         <footer-content></footer-content>
       </div>
     </div>
