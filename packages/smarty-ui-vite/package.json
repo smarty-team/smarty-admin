@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "module": "./dist/smarty-ui.es.js",
+  "homepage": "https://smarty-admin.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "pnpm build:components",
