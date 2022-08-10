@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Content: typeof import('./pages/dashboard/components/Content.vue')['default']
+    Dark: typeof import('./components/Dark.vue')['default']
     FooterContent: typeof import('./components/FooterContent.vue')['default']
     Language: typeof import('./components/Language.vue')['default']
     MainTitle: typeof import('./pages/dashboard/components/MainTitle.vue')['default']

@@ -4,8 +4,8 @@ import AutoImport from "unplugin-auto-import/vite";
 import Layouts from "vite-plugin-vue-layouts";
 import Components from "unplugin-vue-components/vite";
 import Pages from "vite-plugin-pages";
-import Unocss from "unocss/vite";
-import presetIcons from "@unocss/preset-icons";
+import Unocss from 'unocss/vite'
+
 import path from "path";
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 
@@ -30,8 +30,13 @@ export default defineConfig({
     }),
 
     AutoImport({
-      imports: ["vue", "vue-i18n", 'vue-router',],
+      imports: ["vue", "vue-i18n", 'vue-router',"@vueuse/core","@vueuse/head"],
       dts: "src/auto-imports.d.ts",
+      vueTemplate: true,
+      dirs: [
+        'src/composables',
+        'src/store',
+      ],
     }),
 
     Components({
@@ -44,9 +49,7 @@ export default defineConfig({
       dts: "src/components.d.ts",
     }),
 
-    Unocss({
-      presets: [presetIcons()],
-    }),
+    Unocss(),
 
     VueI18n({
       runtimeOnly: true,

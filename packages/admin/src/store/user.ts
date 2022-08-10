@@ -8,10 +8,10 @@ export const useUserStore = defineStore("user", () => {
   }
 
   // darkMode
-  const darkMode = ref(false);
-  function toggleDarkMode() {
-    darkMode.value != darkMode.value;
-  }
+  // const darkMode = ref(false);
+  // function toggleDarkMode() {
+  //   darkMode.value != darkMode.value;
+  // }
 
   const lightBorderStyle = ref("");
   const basicConfig = reactive({
@@ -24,8 +24,8 @@ export const useUserStore = defineStore("user", () => {
   return {
     add,
     count,
-    darkMode,
-    toggleDarkMode,
+    // darkMode,
+    // toggleDarkMode,
     lightBorderStyle,
     ...toRefs(basicConfig),
     basic
