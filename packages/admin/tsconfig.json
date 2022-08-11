@@ -20,7 +20,6 @@
       "vite/client",
       "vite-plugin-pages/client",
       "vite-plugin-vue-layouts/client",
-      "unplugin-auto-import/client",
     ],
     "paths": {
       "~/*": [

@@ -1,5 +1,5 @@
-// const s : string = 'Hello Vite 666'
-// document.querySelector('#app')['innerText'] = s
+const s : string = 'Hello Vite 666'
+document.querySelector('#app')['innerText'] = s
 
 import { createApp, } from "vue";
 
