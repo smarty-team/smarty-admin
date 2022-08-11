@@ -30,7 +30,7 @@ export const config = {
       entry: "./src/entry.ts",
       name: "SmartyUI",
       fileName: "smarty-ui",
-      formats: ["es", "umd", "iife"], // 导出模块类型
+      formats: ["esm", "umd", "iife"], // 导出模块类型
     },
     outDir: "./dist",
   },
@@ -41,13 +41,13 @@ export const config = {
     // simulate DOM with happy-dom
     // (requires installing happy-dom as a peer dependency)
     // environment: 'happy-dom',
-    environment: 'jsdom',
+    environment: "jsdom",
     // 支持tsx组件，很关键
     transformMode: {
-      web: [/.[tj]sx$/]
-    }
-  }
-}
+      web: [/.[tj]sx$/],
+    },
+  },
+};
 
 // https://vitejs.dev/config/
 export default defineConfig(config as UserConfig);

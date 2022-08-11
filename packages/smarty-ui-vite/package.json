@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
-  "module": "./dist/smarty-ui.es.js",
+  "module": "./dist/smarty-ui.esm.js",
   "homepage": "https://smarty-admin.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "pnpm build:components",
     "build:all": "vite build",
-    "build:components": "ts-node ./scripts/build.ts",
+    "build:components": "ts-node ./scripts/build.ts --files",
     "lint": "eslint --fix --ext .ts,.tsx,.vue src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "docs:dev": "vitepress dev docs --config ../vite.config.ts",
@@ -40,7 +40,7 @@
     "prettier": "^2.6.2",
     "smarty-ui-vite": "workspace:^0.1.0",
     "ts-node": "^10.9.1",
-    "vite": "^2.9.9",
+    "vite": "^3.0.5",
     "vue": "^3.2.37"
   },
   "devDependencies": {
