@@ -7,6 +7,7 @@
   "homepage": "https://smarty-admin.vercel.app/",
   "scripts": {
     "dev": "vite",
+    "run:demo": "vite",
     "build": "pnpm build:components",
     "build:all": "vite build",
     "build:components": "ts-node ./scripts/build.ts --files",
