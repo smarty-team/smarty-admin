@@ -1,12 +1,15 @@
-import Button from "./Button";
-import { App } from "vue";
+import { defineComponent, h } from "vue";
 
-// 导出Button组件
-export { Button };
+export default defineComponent({
 
-// 导出Vue插件
-export default {
-  install(app: App) {
-    app.component(Button.name, Button);
+  name: "SButton",
+
+  // template:'<button>MyButton</button>'
+
+  render() {
+
+    return h("button", null, "MyButton");
+
   },
-};
+
+});
