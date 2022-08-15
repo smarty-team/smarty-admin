@@ -3,3 +3,4 @@
 
 cd packages/smarty-ui-vite
 pnpm run lint
+
