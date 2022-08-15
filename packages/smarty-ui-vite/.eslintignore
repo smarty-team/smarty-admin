@@ -8,3 +8,4 @@ coverage
 *.ttf
 src/index.ts
 dist
+.eslintrc.cjs
