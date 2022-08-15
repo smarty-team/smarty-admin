@@ -1,5 +1,5 @@
-import fs from "fs-extra";
-import path from "path";
+import * as fs from "fs-extra";
+import * as path from "path";
 import { config } from "../vite.config";
 import { build, InlineConfig, defineConfig, UserConfig } from "vite";
 const buildAll = async () => {
