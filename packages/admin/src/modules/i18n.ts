@@ -7,7 +7,6 @@ import { UserModule } from "./types";
 import messages from '@intlify/vite-plugin-vue-i18n/messages'
 export const install: UserModule = ({ app }) => {
 
-  console.log("message", messages)
   const i18n = createI18n({
     legacy: false,
     locale: "en",
