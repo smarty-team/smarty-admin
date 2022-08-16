@@ -22,6 +22,18 @@ export default defineConfig({
 
     Pages({
       extensions: ["vue", "md"],
+      extendRoute(route, parent) {
+        console.log('=======url',route.path)
+        if (route.path === '/') {
+          // Index is unauthenticated.
+          return route
+        }
+
+        // Augment the route with meta that indicates that the route requires authentication.
+        return {
+          ...route,
+        }
+      },
       exclude: ['**/components/*.vue'], // 排除页面中的子组件
     }),
 

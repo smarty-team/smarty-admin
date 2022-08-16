@@ -17,9 +17,9 @@ export const config = {
   plugins: [
     vue(),
     // 添加JSX插件
-    vueJsx() as Plugin,
+    vueJsx(),
 
-    UnoCss() as Plugin[],
+    UnoCss(),
   ],
   build: {
     rollupOptions,

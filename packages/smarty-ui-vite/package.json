@@ -10,7 +10,7 @@
     "run:demo": "vite",
     "build": "pnpm build:components",
     "build:all": "vite build",
-    "build:components": "ts-node ./scripts/build.ts --files",
+    "build:components": "ts-node ./scripts/build.ts",
     "lint": "eslint --fix --ext .ts,.tsx,.vue src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "docs:dev": "vitepress dev docs --config ../vite.config.ts",
