@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { defineConfig, Plugin } from "vite";
+import { defineConfig, Plugin, Plugin_2 } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import UnoCss from "./config/unocss";
@@ -15,11 +15,11 @@ const rollupOptions = {
 
 export const config = {
   plugins: [
-    vue(),
+    vue() as Plugin_2,
     // 添加JSX插件
-    vueJsx(),
+    vueJsx() as Plugin_2,
 
-    UnoCss(),
+    UnoCss() as Plugin_2[],
   ],
   build: {
     rollupOptions,
