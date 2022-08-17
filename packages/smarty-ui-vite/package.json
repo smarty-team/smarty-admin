@@ -18,7 +18,7 @@
     "docs:serve": "vitepress serve docs --config ../vite.config.ts",
     "test": "vitest",
     "test:run": "vitest run",
-    "coverage": "c8 vitest run --coverage"
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
