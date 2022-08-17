@@ -30,4 +30,5 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           directory: packages/smarty-ui-vite/coverage
+          files: packages/smarty-ui-vite/coverage/index.html
           token: ${{ secrets.CODECOV_TOKEN }}
