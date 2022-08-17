@@ -15,6 +15,7 @@
 
 
 [![CI](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/smarty-team/smarty-admin/actions/workflows/main.yml)![MIT](https://img.shields.io/github/license/smarty-team/smarty-admin?color=red)
+[![codecov](https://codecov.io/gh/smarty-team/smarty-admin/branch/main/graph/badge.svg?token=7QHP5W7BHZ)](https://codecov.io/gh/smarty-team/smarty-admin)
 
 <br>
 <br>
