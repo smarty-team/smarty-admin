@@ -27,8 +27,7 @@ jobs:
       - name: Run Test Coverage
         run: cd packages/smarty-ui-vite && pnpm coverage
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v3
         with:
           directory: packages/smarty-ui-vite/coverage
-          files: packages/smarty-ui-vite/coverage/index.html
           token: ${{ secrets.CODECOV_TOKEN }}
