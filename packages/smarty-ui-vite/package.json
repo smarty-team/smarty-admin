@@ -46,7 +46,7 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@iconify-json/ic": "^1.1.4",
+    "@iconify-json/ic": "^1.1.7",
     "@testing-library/vue": "^6.5.1",
     "@types/react": "^18.0.9",
     "@unocss/preset-attributify": "^0.35.1",
