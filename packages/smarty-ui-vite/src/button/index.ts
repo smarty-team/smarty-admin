@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "./SFCButton.vue";
 import { App } from "vue";
 
 // 导出Button组件
