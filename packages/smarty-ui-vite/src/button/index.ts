@@ -1,7 +1,7 @@
-import Button from "./SFCButton.vue";
+import Button from "./Button";
 import { App } from "vue";
 
-// 导出Button组件
+// 导出Button
 export { Button };
 
 // 导出Vue插件
