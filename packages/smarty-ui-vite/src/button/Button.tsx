@@ -14,7 +14,6 @@ export type IColor =
   | "pink";
 
 export const props = {
-  // 新增
   size: {
     type: String as PropType<ISize>,
     default: "medium",
