@@ -1,13 +1,12 @@
 <template>
-  <div>Vue</div>
+  <div>NodeJS基础</div>
 </template>
 <script lang="ts">
 export default {
-  menu: 'Vue全家桶',
-  icon: 'i-logos-vue'
+  menu: 'NodeJS基础',
+  icon: 'i-logos-nodejs-icon'
 }
 </script>
-
 <route lang="yaml">
 meta:
   layout: default

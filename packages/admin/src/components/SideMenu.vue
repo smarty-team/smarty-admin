@@ -1,17 +1,34 @@
 <script setup lang="ts">
+import { kMaxLength } from 'buffer';
+
 const { t } = useI18n()
 
-const courses = reactive([
-  { name: 'Vue全家桶', icon: '', url: '/vue' },
-  { name: 'React18全家桶', icon: '', url: '/react' },
-  { name: 'TypeScript基础', icon: '', url: '' },
-  { name: 'Node与服务器端', icon: '', url: '' },
-  { name: '算法与数据结构', icon: '', url: '' },
-  { name: 'Vue全家桶源码', icon: '', url: '' },
-  { name: 'React全家桶源码', icon: '', url: '' },
-  { name: '前端工程化实践', icon: '', url: '' },
-  { name: '面试题串讲', icon: '', url: '' },
-])
+
+const pages: Record<string, any> = import.meta.globEager('~/pages/*.vue')
+
+const menus = Object.keys(pages)
+  .map(k => ({ k, v: pages[k].default }))
+  .filter(page => page.v.menu)
+  .map(page => ({
+    name: page.v.menu,
+    url: page.k.replace('../pages', '').replace('.vue', ''),
+    icon: page.v.icon
+  }))
+
+console.log('menus', menus)
+const courses = reactive(menus)
+
+// const courses = reactive([
+//   { name: 'Vue全家桶', icon: '', url: '/vue' },
+//   { name: 'React18全家桶', icon: '', url: '/react' },
+//   { name: 'TypeScript基础', icon: '', url: '' },
+//   { name: 'Node与服务器端', icon: '', url: '' },
+//   { name: '算法与数据结构', icon: '', url: '' },
+//   { name: 'Vue全家桶源码', icon: '', url: '' },
+//   { name: 'React全家桶源码', icon: '', url: '' },
+//   { name: '前端工程化实践', icon: '', url: '' },
+//   { name: '面试题串讲', icon: '', url: '' },
+// ])
 
 </script>
 
@@ -47,7 +64,7 @@ const courses = reactive([
         <li v-for="(item, index) in courses" :key="index">
           <a class="flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
             :href="item.url"><span class="inline-flex justify-center items-center w-12 h-6 flex-none text-gray-300"><i
-                class="i-mdi-table"></i></span><span class="grow text-gray-300">{{ item.name }}</span>
+                :class="item.icon"></i></span><span class="grow text-gray-300">{{ item.name }}</span>
           </a>
         </li>
       </ul>

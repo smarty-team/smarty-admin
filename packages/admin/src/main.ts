@@ -53,4 +53,5 @@ Object.values(import.meta.globEager("./modules/*.ts")).forEach((i) =>
   i.install?.({ app,router,isClient: true })
 );
 
+
 app.mount("#app");

@@ -23,7 +23,6 @@ export default defineConfig({
     Pages({
       extensions: ["vue", "md"],
       extendRoute(route, parent) {
-        console.log('=======url',route.path)
         if (route.path === '/') {
           // Index is unauthenticated.
           return route
