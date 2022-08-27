@@ -264,9 +264,6 @@ importers:
       vitepress-theme-demoblock: 1.4.2_biqbaboplfbrettd7655fr4n2y
       vitest: 0.14.2_sy2yvgq6lqetcdgkottigly4g4
 
-  packages/smarty-ui-vite/dist/Button:
-    specifiers: {}
-
   packages/ui:
     specifiers:
       '@babel/cli': ^7.18.6
