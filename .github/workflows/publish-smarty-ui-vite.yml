@@ -29,3 +29,5 @@ jobs:
         with:
           default_branch: "publish"
           dir: "packages/smarty-ui-vite"
+          npm_args: "--unsafe-perm --allow-same-version"
+          release_tag: "0.1.0"
