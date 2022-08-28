@@ -1,0 +1,15 @@
+<h1>Demo</h1>
+<div id="app"></div>
+<link rel="stylesheet" href="../../dist/style.css">
+<script type="module">
+  import { createApp } from "../../node_modules/vue/dist/vue.global.js";
+  import SmartyUI, { SFCButton, JSXButton, Button } from "../../dist/smarty-ui.esm.js";
+
+  createApp({
+    template: `
+      <SButton>SButton</SButton>
+      <JSXButton/>
+      <SFCButton/>
+    `}).use(SmartyUI).mount('#app')
+
+</script>

@@ -1,0 +1,18 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "chrome": "67",
+            "ie": "8"
+          },
+          "useBuiltIns": "usage",
+          // false 此时不对 polyfill 做操作
+          // usage 会根据配置的浏览器兼容，以及你代码中用到的 API 来进行 polyfill，实现了按需添加。
+
+          "corejs": "3.6.5"
+        }
+      ]
+    ]
+  }

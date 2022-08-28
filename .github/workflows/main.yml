@@ -7,9 +7,9 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,39 +19,37 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
-    - uses: pnpm/action-setup@v2.1.0
-      with:
-        version: 7.2.1
-    - name: Install modules
-      run: pnpm install
-    - name: Run Lint
-      run: cd packages/ui && pnpm run eslint
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7.2.1
+      - name: Install modules
+        run: pnpm install
+      - name: Run Lint
+        run: cd packages/smarty-ui-vite && pnpm run lint
   UnitTest:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
-    - uses: pnpm/action-setup@v2.1.0
-      with:
-        version: 7.2.1
-    - name: Install modules
-      run: pnpm install
-    - name: Run Test
-      run: cd packages/ui && pnpm run test:run
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7.2.1
+      - name: Install modules
+        run: pnpm install
+      - name: Run Test
+        run: cd packages/smarty-ui-vite && pnpm run test:run
   PreBuild:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
-    - uses: pnpm/action-setup@v2.1.0
-      with:
-        version: 7.2.1
-    - name: Install modules
-      run: pnpm install
-    - name: Run Lint
-      run: cd packages/ui && pnpm run build
-
-
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7.2.1
+      - name: Install modules
+        run: pnpm install
+      - name: Run Lint
+        run: cd packages/smarty-ui-vite && pnpm run build

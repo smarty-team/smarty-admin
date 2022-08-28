@@ -4,12 +4,14 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Content: typeof import('./components/main/Content.vue')['default']
+    Content: typeof import('./pages/dashboard/components/Content.vue')['default']
+    Dark: typeof import('./components/Dark.vue')['default']
     FooterContent: typeof import('./components/FooterContent.vue')['default']
-    MainTitle: typeof import('./components/main/MainTitle.vue')['default']
+    Language: typeof import('./components/Language.vue')['default']
+    MainTitle: typeof import('./pages/dashboard/components/MainTitle.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     SideMenu: typeof import('./components/SideMenu.vue')['default']
-    TeamCard: typeof import('./components/main/TeamCard.vue')['default']
+    TeamCard: typeof import('./pages/dashboard/components/TeamCard.vue')['default']
   }
 }
 

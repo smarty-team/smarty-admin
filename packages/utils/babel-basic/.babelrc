@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "babel-plugin-transform-es2015-arrow-functions"
+  ],
+  "presets": [
+    // "es2015",
+    // "stage-0",
+    // [
+    //   "@babel/preset-env",
+    //   {
+    //     "useBuiltIns": "usage",
+    //     "corejs": 3
+    //   }
+    // ]
+  ]
+}
