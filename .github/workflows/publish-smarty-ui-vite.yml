@@ -27,6 +27,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
         with:
-          default_branch: "publish"
+          default_branch: "publish-smarty-ui-vite"
           dir: "packages/smarty-ui-vite/dist"
           npm_args: "--unsafe-perm --allow-same-version"
