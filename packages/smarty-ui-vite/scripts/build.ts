@@ -10,6 +10,11 @@ const buildAll = async () => {
   await build(defineConfig(config as UserConfig) as InlineConfig);
   // await build(defineConfig({}))
 
+  fs.copyFileSync(
+    path.resolve("./package.json"),
+    path.resolve(config.build.outDir + "/package.json")
+  );
+
   const srcDir = path.resolve(__dirname, "../src/");
   fs.readdirSync(srcDir)
     .filter((name) => {
