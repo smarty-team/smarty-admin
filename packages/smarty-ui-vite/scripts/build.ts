@@ -10,9 +10,17 @@ const buildAll = async () => {
   await build(defineConfig(config as UserConfig) as InlineConfig);
   // await build(defineConfig({}))
 
-  fs.copyFileSync(
-    path.resolve("./package.json"),
-    path.resolve(config.build.outDir + "/package.json")
+  // fs.copyFileSync(
+  //   path.resolve("./package.json"),
+  //   path.resolve(config.build.outDir + "/package.json")
+  // );
+  // 复制 Package.json 文件
+  const packageJson = require("../package.json");
+  packageJson.main = "smarty-ui.umd.js";
+  packageJson.module = "smarty-ui.esm.js";
+  fs.outputFile(
+    path.resolve(config.build.outDir, `package.json`),
+    JSON.stringify(packageJson, null, 2)
   );
 
   const srcDir = path.resolve(__dirname, "../src/");
