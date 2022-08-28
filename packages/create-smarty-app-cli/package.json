@@ -1,6 +1,6 @@
 {
-  "name": "smarty-admin-cli",
-  "version": "1.0.0",
+  "name": "create-smarty-app-cli",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
