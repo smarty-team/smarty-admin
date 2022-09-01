@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { kMaxLength } from 'buffer';
-
 const { t } = useI18n()
 
 
