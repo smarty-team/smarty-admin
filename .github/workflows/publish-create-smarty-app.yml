@@ -27,4 +27,4 @@ jobs:
         with:
           default_branch: "publish-create-smarty-app-cli"
           dir: "packages/create-smarty-app-cli"
-          npm_args: "--unsafe-perm --allow-same-version"
+          # npm_args: "--unsafe-perm --allow-same-version"
