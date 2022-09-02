@@ -107,7 +107,7 @@ importers:
       unplugin-vue-components: 0.17.21_vite@2.9.13+vue@3.2.37
       vite: 2.9.13
 
-  packages/create-smarty-app-cli:
+  packages/create-smarty-app:
     specifiers:
       chalk: ^5.0.1
       chalk-animation: ^2.0.2
@@ -164,7 +164,7 @@ importers:
       smarty-ui-vite: workspace:^0.1.0
       vue: ^3.2.37
     dependencies:
-      smarty-ui-vite: link:../smarty-ui-vite
+      smarty-ui-vite: link:../smarty-ui-vite/dist
       vue: 3.2.37
 
   packages/smarty-ui-rollup:
@@ -314,7 +314,6 @@ importers:
       prettier: ^2.6.2
       react: ^18.1.0
       react-dom: ^18.1.0
-      smarty-ui-vite: workspace:^0.1.0
       unocss: ^0.33.4
       vite: ^3.0.5
       vitepress: ^0.22.4
@@ -339,7 +338,6 @@ importers:
       esno: registry.npmmirror.com/esno/0.16.3
       fs-extra: registry.npmmirror.com/fs-extra/10.1.0
       prettier: registry.npmmirror.com/prettier/2.7.1
-      smarty-ui-vite: link:..
       vite: registry.npmmirror.com/vite/3.0.5
       vue: registry.npmmirror.com/vue/3.2.37
     devDependencies:
@@ -711,7 +709,6 @@ packages:
     optionalDependencies:
       '@nicolo-ribaudo/chokidar-2': registry.npmmirror.com/@nicolo-ribaudo/chokidar-2/2.1.8-no-fsevents.3
       chokidar: registry.npmmirror.com/chokidar/3.5.3
-    dev: false
 
   /@babel/cli/7.18.9_@babel+core@7.18.9:
     resolution: {integrity: sha512-e7TOtHVrAXBJGNgoROVxqx0mathd01oJGXIDekRfxdrISnRqfM795APwkDtse9GdyPYivjg3iXiko3sF3W7f5Q==}
