@@ -28,13 +28,6 @@
 - SSG风格文档自动化工具
 - seed项目模板
 
-# 目录说明
-```bash
-│   packages
-│   ├── seed # admin空模板
-│   ├── docs  # 文档自动化
-│   ├── ui # 组件库
-│   ├── smarty-ui-vite # 组件库 (Vite版本)
-│   ├── admin # admin全量
-│   ├── cli # 脚手架工具
-```
+# 项目组成
+- [ UI组件库(Vite Base) ](packages/smarty-ui-vite)
+- [ UI组件库(Rollup Base) ](packages/smarty-ui-rollup)
