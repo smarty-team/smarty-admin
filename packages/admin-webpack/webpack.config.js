@@ -9,6 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist"), // 打包出口
     filename: "js/[name].js", // 打包完的静态资源文件名
   },
+  resolve: {
+    alias: {
+      "@": path.resolve("src"),
+    },
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".vue", ".json"],
+  },
   module: {
     rules: [
       {
@@ -17,16 +23,15 @@ module.exports = {
       },
       // { test: /\.ts$/, use: ["ts-loader"] },
       {
-        test: /\.(t|j)s$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
           {
             loader: "ts-loader",
             options: {
-              // 指定特定的ts编译配置，为了区分脚本的ts配置
-              // configFile: path.resolve(__dirname, "../tsconfig.json"),
-              // 对应文件添加个.ts或.tsx后缀
-              appendTsSuffixTo: [/\.vue$/],
+              // transpileOnly: true, // 关闭项目运行时的类型检查
+              appendTsSuffixTo: ["\\.vue$"], // 给 .vue文件添加个 .ts后缀用于编译。
+              // happyPackMode: true,
             },
           },
         ],
@@ -34,10 +39,38 @@ module.exports = {
 
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "postcss-loader"],
+        // use: ["style-loader", "css-loader"],
+      },
+
+      {
+        test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
+        type: "asset",
+        // generator: { filename: "img/[contenthash:8][ext][query]" },
+      },
+
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+          sources: {
+            urlFilter: (attribute, value, resourcePath) => {
+              console.log("url======>", value);
+              if (/example\.pdf$/.test(value)) {
+                return false;
+              }
+
+              return true;
+            },
+          },
+        },
       },
     ],
   },
+  devServer: {
+    historyApiFallback: true, // 支持history 模式
+  },
+
   plugins: [
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
