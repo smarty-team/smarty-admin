@@ -7,7 +7,3 @@ export default {
   icon: 'i-logos-react'
 }
 </script>
-<route lang="yaml">
-meta:
-  layout: default
-</route>

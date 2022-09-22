@@ -68,8 +68,3 @@ const router = useRouter()
   background-image: url(../assets/login/bg.png);
 }
 </style>
-
-<route lang="yaml">
-meta:
-  layout: login
-</route>
