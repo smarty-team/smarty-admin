@@ -6,7 +6,8 @@ const smp = require("./config/speedMeasure");
 // const happypack = require("./config/happypack");
 // const threadLoader = require("./config/threadloader");
 
-const terser = require("./config/terser");
+// const terser = require("./config/terser");
+
 base.mode = "production";
 // cache(base); // 增加缓存
 
@@ -15,7 +16,19 @@ base.mode = "production";
 // happypack(base); 反向优化
 
 // threadLoader(base); // 反向优化
-// terser(base);
+require("./config/terser")(base);
+
+// noParse
+require("./config/noParse")(base);
+
+// 编译速度
+require("./config/devOptimization")(base);
+
+// exclude
+require("./config/exclude")(base);
+
+// 关闭SourceMap
+require("./config/sourcemap")(base);
 
 // 速度分析
 base = smp(base);

@@ -1,8 +1,5 @@
 // console.log("Hello Webpack");
 
-
-
-
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from './router'
