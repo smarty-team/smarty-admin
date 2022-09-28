@@ -2,21 +2,22 @@
 
 let base = require("./config/base");
 const cache = require("./config/cache");
-const happypack = require("./config/happypack");
-const threadLoader = require("./config/threadLoader");
 const smp = require("./config/speedMeasure");
-const terser = require("./config/terser");
-let config = base;
-config.mode = "production";
-// cache(base); // 增加缓存
-happypack(base);
-threadLoader(base); // 反向优化
+// const happypack = require("./config/happypack");
+// const threadLoader = require("./config/threadloader");
 
-terser(base);
+const terser = require("./config/terser");
+base.mode = "production";
+// cache(base); // 增加缓存
 
 // console.log("config", config);
 
-// 速度分析
-// config = smp(config);
+// happypack(base); 反向优化
 
-module.exports = config;
+// threadLoader(base); // 反向优化
+// terser(base);
+
+// 速度分析
+base = smp(base);
+
+module.exports = base;
