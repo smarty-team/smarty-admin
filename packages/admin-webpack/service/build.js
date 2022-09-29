@@ -16,19 +16,25 @@ base.mode = "production";
 // happypack(base); 反向优化
 
 // threadLoader(base); // 反向优化
-require("./config/terser")(base);
+// require("./config/terser")(base);
 
-// noParse
-require("./config/noParse")(base);
+// // noParse
+// require("./config/noParse")(base);
 
-// 编译速度
-require("./config/devOptimization")(base);
+// // 编译速度
+// require("./config/devOptimization")(base);
 
-// exclude
-require("./config/exclude")(base);
+// // exclude
+// require("./config/exclude")(base);
 
-// 关闭SourceMap
-require("./config/sourcemap")(base);
+// // 关闭SourceMap
+// require("./config/sourcemap")(base);
+
+// 改用Typescript预设
+// require("./config/babelTs")(base);
+
+// esbuild压缩
+require("./config/quickMinify")(base);
 
 // 速度分析
 base = smp(base);
