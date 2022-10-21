@@ -4,6 +4,7 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import UnoCss from "./config/unocss";
 import { UserConfig } from "vitest";
+import dts from "vite-plugin-dts";
 const rollupOptions = {
   external: ["vue"],
   output: {
@@ -20,6 +21,13 @@ export const config = {
     vueJsx() as Plugin_2,
 
     UnoCss() as Plugin_2[],
+    dts({
+      outputDir: "./dist/types",
+      insertTypesEntry: true, // 插入TS 入口
+      // insertTypesEntry: true, // 是否生成类型声明入口
+      // cleanVueFileName: true, // 是否将 '.vue.d.ts' 文件名转换为 '.d.ts'
+      // copyDtsFiles: true, // 是否将源码里的 .d.ts 文件复制到 outputDir
+    }),
   ],
   build: {
     rollupOptions,

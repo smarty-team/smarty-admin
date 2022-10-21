@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+  },
+  "include": [
+    "src/**/*.ts",
+    "../../dist/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": "true"
+}
