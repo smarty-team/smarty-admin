@@ -23,10 +23,8 @@ export const config = {
     UnoCss() as Plugin_2[],
     dts({
       outputDir: "./dist/types",
-      insertTypesEntry: true, // 插入TS 入口
-      // insertTypesEntry: true, // 是否生成类型声明入口
-      // cleanVueFileName: true, // 是否将 '.vue.d.ts' 文件名转换为 '.d.ts'
-      // copyDtsFiles: true, // 是否将源码里的 .d.ts 文件复制到 outputDir
+      insertTypesEntry: false, // 插入TS 入口
+      copyDtsFiles: true, // 是否将源码里的 .d.ts 文件复制到 outputDir
     }),
   ],
   build: {

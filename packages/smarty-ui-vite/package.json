@@ -25,6 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/fs-extra": "^9.0.13",
+    "@types/node": "^18.11.5",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "@vitejs/plugin-vue": "^2.3.3",
@@ -40,6 +41,7 @@
     "eslint-plugin-vue": "^8.6.0",
     "esno": "^0.16.3",
     "fs-extra": "^10.1.0",
+    "handlebars": "^4.7.7",
     "prettier": "^2.6.2",
     "terser": "^5.15.1",
     "vite": "^3.0.5",

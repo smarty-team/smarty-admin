@@ -1,19 +1,21 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 import { config } from "../vite.config";
+import { generateDTS } from './type'
 import { build, InlineConfig, defineConfig, UserConfig } from "vite";
 const buildAll = async () => {
   // const inline: InlineConfig =
   //   viteConfig;
 
   // 全量打包
-  await build(defineConfig(config as UserConfig) as InlineConfig);
-  // await build(defineConfig({}))
+  // await build(defineConfig(config as UserConfig) as InlineConfig);
+  await build()
 
   // 复制 Package.json 文件
   const packageJson = require("../package.json");
   packageJson.main = "smarty-ui.umd.js";
   packageJson.module = "smarty-ui.esm.js";
+  packageJson.types = "smarty-ui.d.ts";
   fs.outputFile(
     path.resolve(config.build.outDir, `package.json`),
     JSON.stringify(packageJson, null, 2)
@@ -24,6 +26,10 @@ const buildAll = async () => {
     path.resolve("./README.md"),
     path.resolve(config.build.outDir + "/README.md")
   );
+
+  // 生成配置DTS配置文件入口
+  generateDTS(path.resolve(config.build.outDir, `smarty-ui.esm.js`),)
+
 
   const srcDir = path.resolve(__dirname, "../src/");
   fs.readdirSync(srcDir)
@@ -40,7 +46,7 @@ const buildAll = async () => {
           entry: path.resolve(srcDir, name),
           name, // 导出模块名
           fileName: `index`,
-          formats: [`es`, `umd`],
+          formats: [`esm`, `umd`],
         },
         outDir,
       };
@@ -48,13 +54,16 @@ const buildAll = async () => {
       Object.assign(config.build, custom);
       await build(defineConfig(config as UserConfig) as InlineConfig);
 
+      // 将types从 dist/types 拷贝到组件文件夹下
+
+
       fs.outputFile(
         path.resolve(outDir, `package.json`),
         `{
-          "name": "smarty-ui-vite/${name}",
-          "main": "index.umd.js",
-          "module": "index.umd.js"
-}`,
+            "name": "smarty-ui-vite/${name}",
+            "main": "index.umd.js",
+            "module": "index.umd.js"
+  }`,
         `utf-8`
       );
     });
