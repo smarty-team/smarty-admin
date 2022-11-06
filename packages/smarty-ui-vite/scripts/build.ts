@@ -58,10 +58,10 @@ const buildAll = async () => {
     fs.outputFile(
       path.resolve(outDir, `package.json`),
       `{
-          "name": "smarty-ui-vite/${name}",
-          "main": "index.umd.js",
-          "module": "index.umd.js"
-}`,
+            "name": "smarty-ui-vite/${name}",
+            "main": "index.umd.js",
+            "module": "index.umd.js"
+  }`,
       `utf-8`
     );
   }
