@@ -6,6 +6,6 @@ cd packages/smarty-ui-vite
 pnpm test:run
 
 
-cd ../../
-cd packages/ui
-pnpm test:run
+# cd ../../
+# cd packages/ui
+# pnpm test:run
