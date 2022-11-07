@@ -12,7 +12,6 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^3.1.2",
     "vite": "^3.1.8",
-    "vue": "^3.2.41",
-    "ui-ts": "0.1.4"
+    "vue": "^3.2.41"
   }
 }
