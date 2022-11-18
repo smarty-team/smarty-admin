@@ -53,20 +53,32 @@ const courses = reactive([
       <p class="p-3 text-xs uppercase text-gray-400">General</p>
       <ul>
         <li>
-          <a class="router-link-active router-link-exact-active flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
+          <!-- <a class="router-link-active router-link-exact-active flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
             aria-current="page" href="/"><span
               class="inline-flex justify-center items-center w-12 h-6 flex-none font-bold text-white"><i
                 class="i-mdi-television"></i></span><span class="grow font-bold text-white">Dashboard</span>
-          </a>
+          </a> -->
+          <router-link
+            class="router-link-active router-link-exact-active flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
+            aria-current="page" to="/"><span
+              class="inline-flex justify-center items-center w-12 h-6 flex-none font-bold text-white"><i
+                class="i-mdi-television"></i></span><span class="grow font-bold text-white">Dashboard</span>
+          </router-link>
         </li>
       </ul>
       <p class="p-3 text-xs uppercase text-gray-400">{{ t("courses") }}</p>
       <ul>
         <li v-for="(item, index) in courses" :key="index">
-          <a class="flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
+          <!-- <a class="flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
             :href="item.url"><span class="inline-flex justify-center items-center w-12 h-6 flex-none text-gray-300"><i
                 :class="item.icon"></i></span><span class="grow text-gray-300">{{ item.name }}</span>
-          </a>
+          </a> -->
+          <router-link class="flex cursor-pointer dark:hover:bg-gray-700/50 hover:bg-gray-600 hover:bg-opacity-50 py-2"
+            :to="item.url"><span class="inline-flex justify-center items-center w-12 h-6 flex-none text-gray-300"><i
+                :class="item.icon"></i></span><span class="grow text-gray-300">{{ item.name }}</span>
+          </router-link>
+
+
         </li>
       </ul>
       <p class="p-3 text-xs uppercase text-gray-400">About</p>

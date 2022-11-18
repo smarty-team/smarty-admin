@@ -5,29 +5,31 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from '@/layouts/default.vue'
 const router = createRouter({
     history: createWebHistory(
-        
+
     ),
     routes: [
         // { path: '/', component: Index },
         // { path: '/a', component: () => import('@/pages/index.vue') },
         { path: '/login', component: () => import('@/pages/login.vue') },
-        { path: '/dashboard', component: Dashboard,
+        {
+            path: '/', component: () => import('@/layouts/default.vue'),
             children: [
                 {
-                    path: '/',
+                    path: '',
                     component: () => import('@/pages/dashboard/index.vue')
                 },
                 {
-                    path: '/vue',
+                    path: 'vue',
                     component: () => import('@/pages/vue.vue')
                 },
                 {
-                    path: '/react',
+                    path: 'react',
                     component: () => import('@/pages/react.vue')
                 }
-                
 
-            ] },
+
+            ]
+        },
     ]
 })
 export default router

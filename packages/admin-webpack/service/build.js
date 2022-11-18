@@ -34,7 +34,11 @@ base.mode = "production";
 // require("./config/babelTs")(base);
 
 // esbuild压缩
-require("./config/quickMinify")(base);
+// require("./config/quickMinify")(base);
+
+// compress 
+require("./config/compress")(base)
+
 
 // 速度分析
 base = smp(base);
