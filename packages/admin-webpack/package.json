@@ -43,6 +43,7 @@
     "@vueuse/head": "^0.7.9",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "echarts": "^5.3.2",
     "html-loader": "^4.1.0",
     "jsdom": "^20.0.0",
     "mini-css-extract-plugin": "^2.7.0",
