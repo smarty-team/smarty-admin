@@ -3,6 +3,7 @@
 import Index from "@/pages/dashboard/index.vue"
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from '@/layouts/default.vue'
+import VueComp from '@/pages/vue.vue'
 const router = createRouter({
     history: createWebHistory(
 
@@ -21,6 +22,7 @@ const router = createRouter({
                 {
                     path: 'vue',
                     component: () => import('@/pages/vue.vue')
+                    // component: VueComp
                 },
                 {
                     path: 'react',

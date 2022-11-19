@@ -36,8 +36,11 @@ base.mode = "production";
 // esbuild压缩
 // require("./config/quickMinify")(base);
 
+// chunk
+require("./config/splitChunk")(base)
+
 // compress 
-require("./config/compress")(base)
+// require("./config/compress")(base)
 
 
 // 速度分析

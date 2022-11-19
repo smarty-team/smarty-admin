@@ -9,6 +9,7 @@ module.exports = (base) => {
     // loader.use.unshift(MiniCssExtractPlugin.loader)
 
     base.optimization = {
+        // usedExports: false,
         minimize: true,
         minimizer: [
             // JS压缩

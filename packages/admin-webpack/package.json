@@ -7,6 +7,8 @@
     "build": "webpack --config ./service/build.js",
     "build:report": "webpack --config ./webpack.config.js --json=stats.json",
     "build:speed": "webpack --config ./SpeedMeasure.js",
+    "build:watch": "webpack --config ./service/build.js --watch",
+    "dev:server": "node ./server/index.js",
     "dev": "webpack serve --progress --config ./service/dev.js"
   },
   "keywords": [],
@@ -41,9 +43,12 @@
   "dependencies": {
     "@vueuse/core": "^9.1.0",
     "@vueuse/head": "^0.7.9",
+    "connect-history-api-fallback": "^2.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "echarts": "^5.3.2",
+    "ecstatic": "^4.1.4",
+    "express": "^4.18.2",
     "html-loader": "^4.1.0",
     "jsdom": "^20.0.0",
     "mini-css-extract-plugin": "^2.7.0",
