@@ -5,7 +5,7 @@ import JSXButton from "./JSXButton";
 import { Link } from "./Link";
 import "uno.css";
 
-// 导出单独组件
+// 导出单独组件..
 export { Button, SFCButton, JSXButton };
 
 // 编写一个插件，实现一个install方法
