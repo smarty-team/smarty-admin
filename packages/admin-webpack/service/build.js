@@ -37,13 +37,16 @@ base.mode = "production";
 // require("./config/quickMinify")(base);
 
 // chunk
-require("./config/splitChunk")(base)
+// require("./config/splitChunk")(base)
+
+// BundleAnalyze
+require('./config/bundleAnalyzer')(base)
 
 // compress 
-// require("./config/compress")(base)
+require("./config/compress")(base)
 
 
 // 速度分析
-base = smp(base);
+// base = smp(base);
 
 module.exports = base;

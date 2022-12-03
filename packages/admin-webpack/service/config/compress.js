@@ -10,7 +10,7 @@ module.exports = (base) => {
 
     base.optimization = {
         // usedExports: false,
-        minimize: true,
+        // minimize: false,
         minimizer: [
             // JS压缩
             new TerserPlugin({
@@ -18,17 +18,17 @@ module.exports = (base) => {
                     compress: {
                         arguments: true,
                         dead_code: true,
+                        drop_console: true,
+                        drop_debugger: false,
+                        // 移除console，这块是关键
+                        pure_funcs: ['console.log'],
                     },
                     toplevel: false,
                     keep_classnames: true,
                     keep_fnames: true,
                 },
             }),
-
-            // // CSS压缩
-            // new CssMinimizerPlugin()
         ],
     };
 
-    // base.plugins.unshift(new MiniCssExtractPlugin())
 };

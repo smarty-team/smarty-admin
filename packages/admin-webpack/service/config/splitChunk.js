@@ -12,7 +12,10 @@ module.exports = (base) => {
     // }
 
     base.entry = {
-        index: { import: path.resolve(__dirname, "../../src/main.ts"), runtime: "solid-runtime" },
+        index: {
+            import: path.resolve(__dirname, "../../src/main.ts"),
+            // runtime: "solid-runtime" 
+        },
         // login: { import: path.resolve(__dirname, "../../src/login.ts"), runtime: "solid-runtime" },
     }
 
@@ -35,6 +38,7 @@ module.exports = (base) => {
     }))
 
     base.optimization = {
+        // splitChunks: false,
         splitChunks: {
             chunks: 'all', // 从入口开始优化
             minSize: 500 * 1000, // 小于这个尺寸的 Chunk 才会正式被分包
@@ -44,22 +48,8 @@ module.exports = (base) => {
             minChunks: 1,
             maxAsyncRequests: 2,
             maxInitialRequests: 30,
-            enforceSizeThreshold: 50000,
-
-            // cacheGroups: {
-            //   defaultVendors: {
-            //     test: /[\\/]node_modules[\\/]/,
-            //     priority: -10,
-            //     reuseExistingChunk: true,
-            //   },
-            //   default: {
-            //     minChunks: 2,
-            //     priority: -20,
-            //     reuseExistingChunk: true,
-            //   },
-            // },
-        },
-
+            // enforceSizeThreshold: 500 * 1000,
+        }
     }
     return base;
 };

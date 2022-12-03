@@ -21,7 +21,10 @@ const router = createRouter({
                 },
                 {
                     path: 'vue',
+                    // 懒加载
                     component: () => import('@/pages/vue.vue')
+
+                    // 静态引入
                     // component: VueComp
                 },
                 {
