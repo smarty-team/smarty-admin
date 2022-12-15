@@ -35,7 +35,7 @@ module.exports = {
   entry: path.resolve(__dirname, "../../src/main.ts"), // 打包入口
   output: {
     path: path.resolve(__dirname, "../../dist"), // 打包出口
-    filename: "js/[name].js", // 打包完的静态资源文件名
+    filename: "js/[name][chunkhash:8].js", // 打包完的静态资源文件名
   },
   resolve: {
     alias: {
@@ -80,7 +80,11 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
         type: "asset",
-        // generator: { filename: "img/[contenthash:8][ext][query]" },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 20 * 1024 // 4kb
+          }
+        },
       },
 
       {

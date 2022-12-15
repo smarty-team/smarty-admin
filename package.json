@@ -21,8 +21,8 @@
     "husky": "^7.0.4"
   },
   "dependencies": {
-    "@commitlint/cli": "^17.0.2",
-    "@commitlint/config-conventional": "^17.0.2",
-    "vite": "^3.0.4"
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "vite": "^3.2.5"
   }
 }
