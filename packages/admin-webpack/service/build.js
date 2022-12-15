@@ -40,11 +40,14 @@ base.mode = "production";
 // require("./config/splitChunk")(base)
 
 // BundleAnalyze
-require('./config/bundleAnalyzer')(base)
+// require('./config/bundleAnalyzer')(base)
 
 // compress 
-require("./config/compress")(base)
+// require("./config/compress")(base)
 
+
+// skeleton
+// require('./config/skeleton')(base)
 
 // 速度分析
 // base = smp(base);

@@ -112,18 +112,21 @@ module.exports = {
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      templateContent: `
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Webpack App</title>
-    </head>
-    <body>
-      <div id="app" />
-    </body>
-  </html>
-      `,
+      //     templateContent: `
+      // <!DOCTYPE html>
+      // <html>
+      //   <head>
+      //     <meta charset="utf-8">
+      //     <title>Webpack App</title>
+      //   </head>
+      //   <body>
+      //     <div id="app" >
+      //       <h1>GGGGG</h1>
+      //     </div>
+      //   </body>
+      // </html>
+      //     `,
+      template: './public/template.html'
     }),
     new DashboardPlugin(),
   ],
