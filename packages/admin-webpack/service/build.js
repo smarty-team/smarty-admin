@@ -47,9 +47,11 @@ base.mode = "production";
 
 
 // skeleton
-// require('./config/skeleton')(base)
+require('./config/skeleton')(base)
 
 // 速度分析
 // base = smp(base);
+
+
 
 module.exports = base;
