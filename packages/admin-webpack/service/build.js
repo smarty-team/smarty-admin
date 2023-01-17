@@ -45,9 +45,12 @@ base.mode = "production";
 // compress 
 // require("./config/compress")(base)
 
+// image-inline
+// require('./config/image-inline')(base)
+
 
 // skeleton
-require('./config/skeleton')(base)
+// require('./config/skeleton')(base)
 
 // 速度分析
 // base = smp(base);

@@ -50,6 +50,7 @@
     "ecstatic": "^4.1.4",
     "express": "^4.18.2",
     "html-loader": "^4.2.0",
+    "image-webpack-loader": "^8.1.0",
     "jsdom": "^20.0.3",
     "mini-css-extract-plugin": "^2.7.2",
     "page-skeleton-webpack-plugin": "^0.10.12",

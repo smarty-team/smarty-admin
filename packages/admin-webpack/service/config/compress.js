@@ -10,6 +10,7 @@ module.exports = (base) => {
 
     base.optimization = {
         // usedExports: false,
+        // concatenateModules: true,   // 打开ScopeHoisting
         // minimize: false,
         minimizer: [
             // JS压缩
