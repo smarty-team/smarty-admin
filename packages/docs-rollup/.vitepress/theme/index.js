@@ -1,5 +1,4 @@
 
-// import Button from '../../../src/button'
 import SmartyUI from 'smarty-ui-rollup'
 import 'smarty-ui-rollup/dist/smarty-ui-rollup.esm.css'
 
@@ -13,7 +12,6 @@ import Theme from 'vitepress/dist/client/theme-default'
 export default {
     ...Theme,
     enhanceApp({ app }) {
-        // app.component(Button.name, Button)
         app.use(SmartyUI)
         app.component('Demo', Demo)
         app.component('DemoBlock', DemoBlock)
