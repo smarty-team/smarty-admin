@@ -266,6 +266,19 @@ importers:
       smarty-ui-vite: link:../smarty-ui-vite/dist
       vue: registry.npmmirror.com/vue/3.2.45
 
+  packages/docs-vitepress:
+    specifiers:
+      smarty-ui-rollup: workspace:^0.0.5
+      vitepress: ^0.22.4
+      vitepress-theme-demoblock: ^1.4.2
+      vue: ^3.2.45
+    dependencies:
+      smarty-ui-rollup: link:../smarty-ui-rollup
+      vitepress-theme-demoblock: registry.npmmirror.com/vitepress-theme-demoblock/1.4.2
+    devDependencies:
+      vitepress: registry.npmmirror.com/vitepress/0.22.4
+      vue: registry.npmmirror.com/vue/3.2.45
+
   packages/smarty-ui-rollup:
     specifiers:
       '@rollup/plugin-commonjs': ^22.0.2
@@ -2795,6 +2808,18 @@ packages:
     name: '@docsearch/css'
     version: 3.3.0
 
+  registry.npmmirror.com/@docsearch/js/1.0.0-alpha.28:
+    resolution: {integrity: sha512-2g7aPhBy7FoEyeZW2G3LYHWVa8CFvqyozEz8PXt3hyywdFcmEIqmoCRwn8kboVftrOKCjtPcuLCewsaBoB3uiw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@docsearch/js/-/js-1.0.0-alpha.28.tgz}
+    name: '@docsearch/js'
+    version: 1.0.0-alpha.28
+    dependencies:
+      '@docsearch/react': registry.npmmirror.com/@docsearch/react/1.0.0-alpha.28
+      preact: registry.npmmirror.com/preact/10.11.3
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
+
   registry.npmmirror.com/@docsearch/js/1.0.0-alpha.28_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-2g7aPhBy7FoEyeZW2G3LYHWVa8CFvqyozEz8PXt3hyywdFcmEIqmoCRwn8kboVftrOKCjtPcuLCewsaBoB3uiw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@docsearch/js/-/js-1.0.0-alpha.28.tgz}
     id: registry.npmmirror.com/@docsearch/js/1.0.0-alpha.28
@@ -2820,6 +2845,20 @@ packages:
       - react
       - react-dom
     dev: false
+
+  registry.npmmirror.com/@docsearch/js/3.3.0:
+    resolution: {integrity: sha512-oFXWRPNvPxAzBhnFJ9UCFIYZiQNc3Yrv6912nZHw/UIGxsyzKpNRZgHq8HDk1niYmOSoLKtVFcxkccpQmYGFyg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@docsearch/js/-/js-3.3.0.tgz}
+    name: '@docsearch/js'
+    version: 3.3.0
+    dependencies:
+      '@docsearch/react': registry.npmmirror.com/@docsearch/react/3.3.0
+      preact: registry.npmmirror.com/preact/10.11.3
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - '@types/react'
+      - react
+      - react-dom
+    dev: true
 
   registry.npmmirror.com/@docsearch/js/3.3.0_ib3m5ricvtkl2cll7qpr2f6lvq:
     resolution: {integrity: sha512-oFXWRPNvPxAzBhnFJ9UCFIYZiQNc3Yrv6912nZHw/UIGxsyzKpNRZgHq8HDk1niYmOSoLKtVFcxkccpQmYGFyg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@docsearch/js/-/js-3.3.0.tgz}
@@ -2849,6 +2888,20 @@ packages:
       - '@types/react'
       - react
       - react-dom
+    dev: false
+
+  registry.npmmirror.com/@docsearch/react/1.0.0-alpha.28:
+    resolution: {integrity: sha512-XjJOnCBXn+UZmtuDmgzlVIHnnvh6yHVwG4aFq8AXN6xJEIX3f180FvGaowFWAxgdtHplJxFGux0Xx4piHqBzIw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@docsearch/react/-/react-1.0.0-alpha.28.tgz}
+    name: '@docsearch/react'
+    version: 1.0.0-alpha.28
+    peerDependencies:
+      react: ^16.8.0
+      react-dom: ^16.8.0
+    dependencies:
+      '@docsearch/css': registry.npmmirror.com/@docsearch/css/1.0.0-alpha.28
+      '@francoischalifour/autocomplete-core': registry.npmmirror.com/@francoischalifour/autocomplete-core/1.0.0-alpha.28
+      '@francoischalifour/autocomplete-preset-algolia': registry.npmmirror.com/@francoischalifour/autocomplete-preset-algolia/1.0.0-alpha.28
+      algoliasearch: registry.npmmirror.com/algoliasearch/4.14.2
     dev: false
 
   registry.npmmirror.com/@docsearch/react/1.0.0-alpha.28_biqbaboplfbrettd7655fr4n2y:
@@ -2884,6 +2937,30 @@ packages:
       react: registry.npmmirror.com/react/16.14.0
       react-dom: registry.npmmirror.com/react-dom/16.14.0_react@16.14.0
     dev: false
+
+  registry.npmmirror.com/@docsearch/react/3.3.0:
+    resolution: {integrity: sha512-fhS5adZkae2SSdMYEMVg6pxI5a/cE+tW16ki1V0/ur4Fdok3hBRkmN/H8VvlXnxzggkQIIRIVvYPn00JPjen3A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@docsearch/react/-/react-3.3.0.tgz}
+    name: '@docsearch/react'
+    version: 3.3.0
+    peerDependencies:
+      '@types/react': '>= 16.8.0 < 19.0.0'
+      react: '>= 16.8.0 < 19.0.0'
+      react-dom: '>= 16.8.0 < 19.0.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@algolia/autocomplete-core': registry.npmmirror.com/@algolia/autocomplete-core/1.7.2
+      '@algolia/autocomplete-preset-algolia': registry.npmmirror.com/@algolia/autocomplete-preset-algolia/1.7.2_algoliasearch@4.14.2
+      '@docsearch/css': registry.npmmirror.com/@docsearch/css/3.3.0
+      algoliasearch: registry.npmmirror.com/algoliasearch/4.14.2
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+    dev: true
 
   registry.npmmirror.com/@docsearch/react/3.3.0_ib3m5ricvtkl2cll7qpr2f6lvq:
     resolution: {integrity: sha512-fhS5adZkae2SSdMYEMVg6pxI5a/cE+tW16ki1V0/ur4Fdok3hBRkmN/H8VvlXnxzggkQIIRIVvYPn00JPjen3A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@docsearch/react/-/react-3.3.0.tgz}
@@ -25195,6 +25272,30 @@ packages:
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
 
+  registry.npmmirror.com/vitepress-theme-demoblock/1.4.2:
+    resolution: {integrity: sha512-OMIRg1JJI8NvBVLFu2G0cd+gT5IzXZfTsV7yws7GfRXZE3Q4qLO5cR1+ngNnFZw44ID1oLk+Yu9HZM+AJYtgWA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress-theme-demoblock/-/vitepress-theme-demoblock-1.4.2.tgz}
+    name: vitepress-theme-demoblock
+    version: 1.4.2
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      camelcase: registry.npmmirror.com/camelcase/6.3.0
+      globby: registry.npmmirror.com/globby/11.1.0
+      kolorist: registry.npmmirror.com/kolorist/1.6.0
+      markdown-it: registry.npmmirror.com/markdown-it/12.3.2
+      minimist: registry.npmmirror.com/minimist/1.2.7
+      prettier: registry.npmmirror.com/prettier/2.8.1
+      vitepress: registry.npmmirror.com/vitepress/0.16.1
+      yaml: registry.npmmirror.com/yaml/2.1.3
+    transitivePeerDependencies:
+      - less
+      - react
+      - react-dom
+      - sass
+      - stylus
+      - supports-color
+    dev: false
+
   registry.npmmirror.com/vitepress-theme-demoblock/1.4.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-OMIRg1JJI8NvBVLFu2G0cd+gT5IzXZfTsV7yws7GfRXZE3Q4qLO5cR1+ngNnFZw44ID1oLk+Yu9HZM+AJYtgWA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress-theme-demoblock/-/vitepress-theme-demoblock-1.4.2.tgz}
     id: registry.npmmirror.com/vitepress-theme-demoblock/1.4.2
@@ -25236,6 +25337,49 @@ packages:
       prettier: registry.npmmirror.com/prettier/2.8.1
       vitepress: registry.npmmirror.com/vitepress/0.16.1_wcqkhtmu7mswc6yz4uyexck3ty
       yaml: registry.npmmirror.com/yaml/2.1.3
+    transitivePeerDependencies:
+      - less
+      - react
+      - react-dom
+      - sass
+      - stylus
+      - supports-color
+    dev: false
+
+  registry.npmmirror.com/vitepress/0.16.1:
+    resolution: {integrity: sha512-jsgNY+b4mngVHQ1mZZ7ZGJliup/nM0jwdKTGoptwVzSQfkx5i3lF14jRRMb6ulC+9X5xbQ7N/zNcWqVWMFd/cQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-0.16.1.tgz}
+    name: vitepress
+    version: 0.16.1
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      '@docsearch/css': registry.npmmirror.com/@docsearch/css/1.0.0-alpha.28
+      '@docsearch/js': registry.npmmirror.com/@docsearch/js/1.0.0-alpha.28
+      '@types/markdown-it': registry.npmmirror.com/@types/markdown-it/12.2.3
+      '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/1.10.2_vite@2.9.15
+      '@vue/compiler-sfc': registry.npmmirror.com/@vue/compiler-sfc/3.2.45
+      '@vue/server-renderer': registry.npmmirror.com/@vue/server-renderer/3.2.45_vue@3.2.45
+      chalk: registry.npmmirror.com/chalk/4.1.2
+      compression: registry.npmmirror.com/compression/1.7.4
+      debug: registry.npmmirror.com/debug/4.3.4
+      diacritics: registry.npmmirror.com/diacritics/1.3.0
+      escape-html: registry.npmmirror.com/escape-html/1.0.3
+      fs-extra: registry.npmmirror.com/fs-extra/10.1.0
+      globby: registry.npmmirror.com/globby/11.1.0
+      gray-matter: registry.npmmirror.com/gray-matter/4.0.3
+      lru-cache: registry.npmmirror.com/lru-cache/6.0.0
+      markdown-it: registry.npmmirror.com/markdown-it/12.3.2
+      markdown-it-anchor: registry.npmmirror.com/markdown-it-anchor/7.1.0_markdown-it@12.3.2
+      markdown-it-container: registry.npmmirror.com/markdown-it-container/3.0.0
+      markdown-it-emoji: registry.npmmirror.com/markdown-it-emoji/2.0.2
+      markdown-it-table-of-contents: registry.npmmirror.com/markdown-it-table-of-contents/0.5.2
+      minimist: registry.npmmirror.com/minimist/1.2.7
+      ora: registry.npmmirror.com/ora/5.4.1
+      polka: registry.npmmirror.com/polka/0.5.2
+      prismjs: registry.npmmirror.com/prismjs/1.29.0
+      sirv: registry.npmmirror.com/sirv/1.0.19
+      vite: registry.npmmirror.com/vite/2.9.15
+      vue: registry.npmmirror.com/vue/3.2.45
     transitivePeerDependencies:
       - less
       - react
@@ -25332,6 +25476,29 @@ packages:
       - stylus
       - supports-color
     dev: false
+
+  registry.npmmirror.com/vitepress/0.22.4:
+    resolution: {integrity: sha512-oZUnLO/SpYdThaBKefDeOiVlr0Rie4Ppx3FzMnMyLtJnI5GlBMNjqYqMy/4+umm/iC+ZDJfI+IlDKxv5fZnYzA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-0.22.4.tgz}
+    name: vitepress
+    version: 0.22.4
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      '@docsearch/css': registry.npmmirror.com/@docsearch/css/3.3.0
+      '@docsearch/js': registry.npmmirror.com/@docsearch/js/3.3.0
+      '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/2.3.4_vite@2.9.15+vue@3.2.45
+      prismjs: registry.npmmirror.com/prismjs/1.29.0
+      vite: registry.npmmirror.com/vite/2.9.15
+      vue: registry.npmmirror.com/vue/3.2.45
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - '@types/react'
+      - less
+      - react
+      - react-dom
+      - sass
+      - stylus
+    dev: true
 
   registry.npmmirror.com/vitepress/0.22.4_ib3m5ricvtkl2cll7qpr2f6lvq:
     resolution: {integrity: sha512-oZUnLO/SpYdThaBKefDeOiVlr0Rie4Ppx3FzMnMyLtJnI5GlBMNjqYqMy/4+umm/iC+ZDJfI+IlDKxv5fZnYzA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-0.22.4.tgz}
